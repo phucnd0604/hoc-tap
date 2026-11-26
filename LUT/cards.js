@@ -117,5 +117,17 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li>Thông tư liên tịch không thay thế Nghị định khi cần quy định vượt phạm vi thẩm quyền cấp Bộ.</li>
 </ul>
 <p class="src">Nguồn: slide 16 · Luật BHVBQPPL 2025 (khoản 9 Điều 4; Điều 2, 3)</p>`
+  },
+  {
+    id: "cd1-s28-bien-phap-an-ninh-ttck",
+    front: `<p class="q">Biện pháp bảo đảm an ninh, an toàn TTCK KHÔNG bao gồm:</p>
+<p class="q">a) Hủy bỏ đợt chào bán chứng khoán ra công chúng<br>b) Cấm đảm nhiệm chức vụ tại công ty chứng khoán<br>c) Ứng phó, khắc phục sự cố, sự kiện, biến động ảnh hưởng đến an toàn, ổn định và tính toàn vẹn của TTCK<br>d) Tạm ngừng, đình chỉ giao dịch đối với một hoặc một số chứng khoán niêm yết, đăng ký giao dịch</p>`,
+    back: `<p class="tag">Đáp án: a — Hủy bỏ đợt chào bán chứng khoán ra công chúng</p>
+<ul>
+  <li>Điều 7 LCK 2019 liệt kê 7 nhóm biện pháp: (1) giám sát an ninh, an toàn TTCK; (2) ứng phó, khắc phục sự cố, biến động; (3) tạm ngừng, đình chỉ giao dịch một hoặc một số chứng khoán niêm yết/đăng ký giao dịch; (4) tạm ngừng, đình chỉ/khôi phục hoạt động giao dịch của SGDCK Việt Nam và công ty con; (5) tạm ngừng, đình chỉ/khôi phục hoạt động đăng ký, lưu ký, bù trừ, thanh toán của VSDC; (6) cấm đảm nhiệm chức vụ/cấm hoạt động chứng khoán có thời hạn hoặc vĩnh viễn; (7) phong tỏa tài khoản chứng khoán, yêu cầu phong tỏa tài khoản tiền.</li>
+</ul>
+<p class="tag">Vì sao a sai</p>
+<p>Đình chỉ (Điều 27) và hủy bỏ (Điều 28) đợt chào bán ra công chúng là biện pháp xử lý đối với đợt chào bán — không nằm trong Điều 7.</p>
+<p class="src">Nguồn: slide 26–28 · LCK 2019 (Điều 7, 27, 28)</p>`
   }
 ];
