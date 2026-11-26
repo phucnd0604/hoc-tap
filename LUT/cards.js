@@ -204,5 +204,17 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li><strong>d sai:</strong> Sở giao dịch chứng khoán là pháp nhân tổ chức, vận hành thị trường giao dịch chứng khoán — đối tượng được quản lý, không phải cơ quan quản lý nhà nước.</li>
 </ul>
 <p class="src">Nguồn: slide 46 · Luật Chứng khoán 2019 (Điều 8, Điều 9)</p>`
+  },
+  {
+    id: "cd1-s47-pham-vi-luat-chung-khoan",
+    front: `<p class="q">Nội dung nào sau đây thuộc phạm vi điều chỉnh của Luật Chứng khoán?</p>
+<p class="q">a) Thành lập, tổ chức và hoạt động của công ty đại chúng<br>b) Tất cả hoạt động chào bán, phát hành chứng khoán của doanh nghiệp<br>c) Chào bán chứng khoán ra công chúng và chào bán, phát hành của công ty đại chúng</p>`,
+    back: `<p class="tag">Đáp án: c</p>
+<ul>
+  <li><strong>c đúng:</strong> Điều 1 Luật Chứng khoán 2019 quy định về chào bán chứng khoán ra công chúng; chào bán, phát hành chứng khoán của công ty đại chúng.</li>
+  <li><strong>a sai:</strong> việc thành lập, tổ chức và hoạt động của doanh nghiệp (kể cả công ty đại chúng) do Luật Doanh nghiệp điều chỉnh; Luật Chứng khoán chỉ điều chỉnh các nội dung chuyên ngành về công ty đại chúng (điều kiện trở thành, đăng ký, quyền và nghĩa vụ, quản trị công ty đại chúng).</li>
+  <li><strong>b sai:</strong> không phải “tất cả” — chào bán riêng lẻ của tổ chức phát hành không phải công ty đại chúng thực hiện theo Luật Doanh nghiệp (Điều 30 Luật Chứng khoán dẫn chiếu).</li>
+</ul>
+<p class="src">Nguồn: slide 47 · Luật Chứng khoán 2019 (Điều 1; Điều 30)</p>`
   }
 ];
