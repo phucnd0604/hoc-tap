@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FFF7F8">
+<title>Flashcard · Học theo môn</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* =====================================================================
+     BỘ ANIMATION DÙNG CHUNG (ANIMATION KIT)
+     Mọi thẻ, mọi môn dùng chung — không sửa khi thêm môn mới.
+       - Lật thẻ 3D : .card.flipped (rotateY 180deg)
+       - Vuốt ra     : Anim.out()
+       - Thẻ vào     : Anim.enter()
+       - Bật lại     : Anim.back()
+       - Nháy nút    : Anim.pulse()
+     ===================================================================== */
+  :root{
+    --bg:#FFF7F8; --card:#fff; --ink:#2A0F1A; --muted:#8A5B67; --muted-2:#9A6B78;
+    --rose:#E11D48; --rose-soft:#FB7185; --warm:#EA580C;
+    --grad:linear-gradient(135deg,#FD267A 0%,#FF6036 100%);
+    --line:#F7D8DF; --line-strong:#FBCFE8;
+    --radius:26px;
+    --shadow-card:0 26px 50px -14px rgba(225,29,72,.28), 0 10px 24px rgba(225,29,72,.10);
+    --ease-flip:cubic-bezier(.2,.75,.25,1);
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none !important}
+  html,body{height:100%; overflow-x:hidden}
+  body{
+    margin:0; overflow-x:hidden; overscroll-behavior-x:none;
+    font-family:'Nunito','Segoe UI',system-ui,-apple-system,Roboto,sans-serif;
+    color:var(--ink); min-height:100vh; display:flex; flex-direction:column;
+    background:
+      radial-gradient(1100px 620px at 12% -14%, #FFE1E9 0%, rgba(255,225,233,0) 58%),
+      radial-gradient(900px 620px at 106% 6%, #FFE9DC 0%, rgba(255,233,220,0) 55%),
+      var(--bg);
+  }
+  button{font:inherit}
+  :focus-visible{outline:3px solid #FD267A; outline-offset:2px; border-radius:10px}
+
+  /* ---------- Header ---------- */
+  header{
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    padding:12px 18px 10px;
+  }
+  .brand{display:flex; align-items:center; gap:9px; min-width:0}
+  .logo{
+    width:30px; height:30px; border-radius:50%; background:var(--grad);
+    display:grid; place-items:center; box-shadow:0 6px 14px rgba(253,38,122,.35); flex:0 0 auto;
+  }
+  .logo svg{width:16px; height:16px; color:#fff}
+  .wordmark{
+    font-size:11px; font-weight:900; letter-spacing:.16em; text-transform:uppercase;
+    color:#B04A63;
+  }
+  .subject-wrap{position:relative; min-width:0}
+  .subject-btn{
+    display:inline-flex; align-items:center; gap:8px; max-width:min(56vw,460px);
+    padding:9px 14px; border-radius:999px; border:1.5px solid var(--line-strong); background:#fff;
+    font-weight:800; font-size:15px; color:#3B0A1E; cursor:pointer;
+    box-shadow:0 4px 12px rgba(225,29,72,.06);
+    transition:background .15s ease, border-color .15s ease, box-shadow .15s ease;
+  }
+  .subject-btn:hover{background:#FFF5F8; border-color:#F9A8D4}
+  .subject-btn[aria-expanded="true"]{border-color:#FD267A; box-shadow:0 0 0 4px rgba(253,38,122,.12)}
+  .subject-btn[aria-busy="true"]{opacity:.65; cursor:progress}
+  .subject-name{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .chev{flex:0 0 auto; color:#BE123C; transition:transform .18s ease}
+  .subject-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+  .subject-list{
+    position:absolute; left:0; top:calc(100% + 8px);
+    min-width:max(100%,240px); max-width:min(88vw,420px); margin:0; padding:6px; list-style:none;
+    background:#fff; border:1px solid #F8D7DF; border-radius:16px;
+    box-shadow:0 22px 48px rgba(190,18,60,.20);
+    opacity:0; transform:translateY(-6px) scale(.98); pointer-events:none;
+    transition:opacity .16s ease, transform .16s ease; z-index:40;
+  }
+  .subject-wrap.open .subject-list{opacity:1; transform:none; pointer-events:auto}
+  .subject-option{
+    padding:10px 12px; border-radius:11px; font-size:14px; font-weight:700;
+    color:#3B0A1E; cursor:pointer; outline:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  }
+  .subject-option:hover{background:#FFF1F5}
+  .subject-option:focus{background:#FFF1F5}
+  .subject-option[aria-selected="true"]{background:#FFE4EC; color:#BE123C}
+  .meta{display:flex; gap:6px; margin-left:auto}
+  .pill{
+    padding:6px 11px; border-radius:999px; background:#fff; border:1px solid var(--line-strong);
+    font-size:12px; font-weight:800; color:#9F1239; white-space:nowrap;
+  }
+
+  /* ---------- Sân khấu thẻ ---------- */
+  main{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:16px 18px 4px; width:100%}
+  .stage{position:relative; width:min(640px,100%); height:clamp(380px,54vh,580px); perspective:1500px}
+  .under{
+    position:absolute; inset:0; border-radius:var(--radius); background:#fff;
+    border:1px solid #FBE3E9; box-shadow:0 12px 28px rgba(225,29,72,.07);
+    transform:translateY(16px) scale(.955); pointer-events:none;
+  }
+  .swipe{
+    position:absolute; inset:0; border-radius:var(--radius);
+    box-shadow:var(--shadow-card); touch-action:pan-y; cursor:grab;
+    will-change:transform; user-select:none;
+  }
+  .swipe.dragging{cursor:grabbing}
+  .card{
+    position:absolute; inset:0; border-radius:var(--radius);
+    transform-style:preserve-3d; transition:transform .52s var(--ease-flip);
+    will-change:transform;
+  }
+  .card.noflip{transition:none}
+  .card.flipped{transform:rotateY(180deg)}
+  .face{
+    position:absolute; inset:0; padding:clamp(24px,3.8vw,40px);
+    background:var(--card); border-radius:var(--radius);
+    backface-visibility:hidden; -webkit-backface-visibility:hidden;
+    touch-action:pan-y; user-select:none;
+  }
+  .face.front{display:flex; flex-direction:column; justify-content:center; overflow:hidden}
+  .face.back{transform:rotateY(180deg); overflow:auto; scrollbar-width:thin; scrollbar-color:#F3D6DD transparent}
+  .face.back::-webkit-scrollbar{width:8px}
+  .face.back::-webkit-scrollbar-thumb{background:#F3D6DD; border-radius:8px}
+
+  .q{font-size:clamp(19px,2.4vw,24px); font-weight:800; line-height:1.38; letter-spacing:-.01em; margin:.3em 0}
+  .back{font-size:clamp(15px,1.7vw,16.5px); line-height:1.65; color:#4A2A35}
+  .back ul{margin:.4em 0 .8em; padding-left:1.15em}
+  .back li{margin:.38em 0}
+  .tag{font-weight:800; color:var(--rose); margin:1.1em 0 .2em; font-size:.98em}
+  .tag:first-child{margin-top:0}
+  .src{margin-top:1.3em; padding-top:.85em; border-top:1px dashed #F3D6DD; color:var(--muted-2); font-size:.82em; line-height:1.55}
+
+  .hint{color:var(--muted); font-size:12.5px; text-align:center; max-width:640px}
+
+  /* ---------- Hàng nút kiểu Tinder ---------- */
+  .actions{display:flex; align-items:flex-start; justify-content:center; gap:clamp(14px,3vw,26px); padding:6px 16px 16px}
+  .act-wrap{display:flex; flex-direction:column; align-items:center; gap:6px}
+  .act{
+    width:56px; height:56px; border-radius:50%; display:grid; place-items:center;
+    background:#fff; border:1.5px solid var(--line); color:var(--rose);
+    box-shadow:0 8px 18px rgba(190,18,60,.10); cursor:pointer;
+    transition:transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+  }
+  .act svg{width:24px; height:24px}
+  .act:hover{transform:translateY(-2px); box-shadow:0 12px 24px rgba(190,18,60,.18)}
+  .act:active{transform:scale(.96)}
+  .act:disabled{opacity:.38; cursor:not-allowed; transform:none; box-shadow:none}
+  .act-prev{color:#D97706}
+  .act-next{color:#E11D48}
+  .act-flip{
+    width:66px; height:66px; border:0; color:#fff; background:var(--grad);
+    box-shadow:0 14px 26px rgba(253,38,122,.36);
+  }
+  .act-flip:hover{box-shadow:0 18px 32px rgba(253,38,122,.44)}
+  .act-mark{color:#16A34A}
+  .act-mark.on{background:#ECFDF3; border-color:#86EFAC; color:#15803D}
+  .act-mark.on svg{fill:currentColor}
+  .act-label{font-size:10.5px; font-weight:800; color:var(--muted-2); letter-spacing:.02em}
+
+  @media (max-width:640px){
+    .wordmark{display:none}
+    .subject-btn{max-width:64vw}
+    .meta .pill{font-size:11px; padding:5px 8px}
+    .stage{height:clamp(420px,62vh,600px)}
+  }
+  @media (max-width:420px){
+    .subject-btn{max-width:60vw; font-size:14px}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .card, .subject-list, .chev, .act, .subject-btn{transition:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+      </svg>
+    </span>
+    <span class="wordmark">Flashcard</span>
+  </div>
+
+  <div class="subject-wrap" id="subjectWrap">
+    <button id="subjectBtn" class="subject-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="subjectList">
+      <span class="subject-name" id="subjectName">Chọn môn</span>
+      <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </button>
+    <ul id="subjectList" class="subject-list" role="listbox" aria-label="Chọn môn học"></ul>
+  </div>
+
+  <div class="meta">
+    <span class="pill" id="pos"></span>
+    <span class="pill" id="knownCount"></span>
+  </div>
+</header>
+
+<main>
+  <div class="stage" id="stage">
+    <div class="under" id="under" aria-hidden="true"></div>
+    <div class="swipe" id="swipe">
+      <div class="card" id="card">
+        <div class="face front" id="front"></div>
+        <div class="face back" id="back"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hint">Kéo để chuyển thẻ · chạm để lật</div>
+</main>
+
+<nav class="actions" aria-label="Điều khiển thẻ">
+  <div class="act-wrap">
+    <button id="prev" class="act act-prev" type="button" aria-label="Thẻ trước" title="Thẻ trước">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    </button>
+    <span class="act-label">Trước</span>
+  </div>
+  <div class="act-wrap">
+    <button id="flip" class="act act-flip" type="button" aria-label="Lật thẻ" title="Lật thẻ">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v5h-5"/></svg>
+    </button>
+    <span class="act-label">Lật</span>
+  </div>
+  <div class="act-wrap">
+    <button id="next" class="act act-next" type="button" aria-label="Thẻ sau" title="Thẻ sau">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </button>
+    <span class="act-label">Sau</span>
+  </div>
+  <div class="act-wrap">
+    <button id="mark" class="act act-mark" type="button" aria-label="Đánh dấu đã thuộc" title="Đánh dấu đã thuộc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+    </button>
+    <span class="act-label">Thuộc</span>
+  </div>
+</nav>
+
+<script src="subjects.js"></script>
+<script>
+// ===== BỘ ANIMATION DÙNG CHUNG (JS) =====
+const REDUCED = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const Anim = {
+  flip(cardEl, toBack){ cardEl.classList.toggle('flipped', toBack); },
+  out(el, dir){
+    const w = (el.offsetWidth || 320) + 80;
+    const from = el.style.transform || 'none';
+    return el.animate([
+      { transform: from, opacity: 1 },
+      { transform: 'translateX(' + (dir * w) + 'px) rotate(' + (dir * 16) + 'deg)', opacity: .85 }
+    ], { duration: REDUCED ? 1 : 260, easing: 'cubic-bezier(.35,0,.75,1)', fill: 'forwards' }).finished.catch(function(){});
+  },
+  enter(el){
+    return el.animate([
+      { transform: 'translateY(18px) scale(.96)', opacity: .5 },
+      { transform: 'none', opacity: 1 }
+    ], { duration: REDUCED ? 1 : 300, easing: 'cubic-bezier(.2,.8,.25,1)' }).finished.catch(function(){});
+  },
+  back(el, from){
+    return el.animate([
+      { transform: from || 'none' },
+      { transform: 'none' }
+    ], { duration: REDUCED ? 1 : 220, easing: 'cubic-bezier(.2,.8,.25,1)' }).finished.catch(function(){});
+  },
+  pulse(el){
+    if (REDUCED) return;
+    el.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.06)' }, { transform: 'scale(1)' }],
+      { duration: 220, easing: 'ease-out' });
+  }
+};
+
+// ===== MÔN HỌC / NẠP DỮ LIỆU =====
+window.SUBJECT_DATA = window.SUBJECT_DATA || {};
+const SUBJECT_DATA = window.SUBJECT_DATA;
+const SUBJECTS = Array.isArray(window.SUBJECTS) ? window.SUBJECTS : [];
+const loaders = {};
+
+const state = { id: null, deck: [], idx: 0, known: {}, flipped: false, busy: false, drag: null, loading: false };
+
+const $ = function(id){ return document.getElementById(id); };
+const els = { card:$('card'), swipe:$('swipe'), front:$('front'), back:$('back'), under:$('under'),
+  pos:$('pos'), knownCount:$('knownCount'),
+  subjectWrap:$('subjectWrap'), subjectBtn:$('subjectBtn'), subjectName:$('subjectName'), subjectList:$('subjectList'),
+  prev:$('prev'), flip:$('flip'), next:$('next'), mark:$('mark') };
+
+let menuIndex = 0;
+
+function current(){ return state.deck[state.idx] || null; }
+function progressKey(id){ return 'fc:' + id + ':progress:v1'; }
+function loadKnown(id){ try { return JSON.parse(localStorage.getItem(progressKey(id))) || {}; } catch(e){ return {}; } }
+function saveKnown(){ try { localStorage.setItem(progressKey(state.id), JSON.stringify(state.known)); } catch(e){} }
+function countKnown(){ return state.deck.filter(function(d){ return state.known[d.id]; }).length; }
+
+function updateMeta(){
+  els.pos.textContent = 'Thẻ ' + (state.deck.length ? state.idx + 1 : 0) + '/' + state.deck.length;
+  els.knownCount.textContent = 'Đã thuộc ' + countKnown() + '/' + state.deck.length;
+  const c = current();
+  const on = !!(c && state.known[c.id]);
+  els.mark.classList.toggle('on', on);
+  els.mark.setAttribute('aria-label', on ? 'Bỏ đánh dấu đã thuộc' : 'Đánh dấu đã thuộc');
+  els.mark.title = on ? 'Bỏ đánh dấu đã thuộc' : 'Đánh dấu đã thuộc';
+  els.mark.disabled = !c;
+  els.prev.disabled = state.deck.length < 2;
+  els.next.disabled = state.deck.length < 2;
+  els.under.hidden = state.deck.length < 2;
+}
+
+function resetFlipInstant(){
+  els.card.classList.add('noflip');
+  els.card.classList.remove('flipped');
+  void els.card.offsetWidth;
+  els.card.classList.remove('noflip');
+}
+
+function render(resetFlip){
+  const c = current();
+  els.front.innerHTML = c ? c.front : '<p class="q">Chưa có thẻ trong môn này.</p>';
+  els.back.innerHTML = c ? c.back : '';
+  updateMeta();
+  if (resetFlip) resetFlipInstant();
+}
+
+function doFlip(){
+  if (state.busy || !current()) return;
+  state.flipped = !state.flipped;
+  Anim.flip(els.card, state.flipped);
+}
+
+function toggleKnown(){
+  const c = current();
+  if (!c) return;
+  if (state.known[c.id]) delete state.known[c.id]; else state.known[c.id] = true;
+  saveKnown();
+  updateMeta();
+  Anim.pulse(els.mark);
+}
+
+// ===== CHUYỂN THẺ =====
+function settle(){
+  els.swipe.getAnimations().forEach(function(a){ a.cancel(); });
+  els.swipe.style.transform = '';
+}
+
+function animateNav(dir){
+  if (state.busy || state.deck.length < 2) return;
+  state.busy = true;
+  Anim.out(els.swipe, dir).then(function(){
+    settle();
+    state.idx = (state.idx + dir + state.deck.length) % state.deck.length;
+    state.flipped = false;
+    render(true);
+    return Anim.enter(els.swipe);
+  }).then(function(){
+    settle();
+    state.busy = false;
+  }).catch(function(){
+    settle();
+    state.busy = false;
+  });
+}
+
+// ===== KÉO / CHẠM =====
+function currentTransform(){ return els.swipe.style.transform || 'none'; }
+
+function setDragVisual(dx){
+  const rot = Math.max(-12, Math.min(12, dx * 0.05));
+  els.swipe.style.transform = 'translateX(' + dx + 'px) rotate(' + rot + 'deg)';
+  const p = Math.min(1, Math.abs(dx) / 220);
+  els.under.style.transform = 'translateY(' + (16 - 9 * p) + 'px) scale(' + (0.955 + 0.04 * p) + ')';
+}
+
+function resetUnder(){
+  els.under.style.transition = '';
+  els.under.style.transform = '';
+}
+
+els.swipe.addEventListener('pointerdown', function(e){
+  if (state.busy) return;
+  if (e.pointerType === 'mouse' && e.button !== 0) return;
+  state.drag = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now(), dx: 0, axis: null };
+  els.swipe.classList.add('dragging');
+  els.under.style.transition = 'none';
+  try { els.swipe.setPointerCapture(e.pointerId); } catch(err){}
+});
+
+window.addEventListener('pointermove', function(e){
+  const d = state.drag;
+  if (!d || e.pointerId !== d.id) return;
+  const dx = e.clientX - d.x;
+  const dy = e.clientY - d.y;
+  if (!d.axis){
+    if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+    d.axis = Math.abs(dx) > Math.abs(dy) ? 'x' : 'y';
+    if (d.axis === 'y'){ state.drag = null; els.swipe.classList.remove('dragging'); resetUnder(); return; }
+  }
+  d.dx = dx;
+  setDragVisual(dx);
+});
+
+function endDrag(e){
+  const d = state.drag;
+  if (!d || e.pointerId !== d.id) return;
+  state.drag = null;
+  els.swipe.classList.remove('dragging');
+  const dt = Math.max(1, performance.now() - d.t);
+  const moved = Math.abs(d.dx || 0);
+  const velocity = moved / dt;
+
+  if (d.axis !== 'x'){
+    resetUnder();
+    if (moved < 8 && dt < 700) doFlip();
+    return;
+  }
+
+  if (state.deck.length < 2){
+    const from = currentTransform();
+    els.swipe.style.transform = '';
+    Anim.back(els.swipe, from).then(settle);
+    resetUnder();
+    return;
+  }
+
+  const far = moved > Math.min(120, els.swipe.offsetWidth * 0.28);
+  const fast = velocity > 0.6 && moved > 70;
+  if (far || fast){
+    resetUnder();
+    animateNav(d.dx > 0 ? 1 : -1);
+  } else {
+    const from = currentTransform();
+    els.swipe.style.transform = '';
+    Anim.back(els.swipe, from).then(settle);
+    resetUnder();
+  }
+}
+
+window.addEventListener('pointerup', endDrag);
+window.addEventListener('pointercancel', function(e){
+  const d = state.drag;
+  if (!d || e.pointerId !== d.id) return;
+  state.drag = null;
+  els.swipe.classList.remove('dragging');
+  els.swipe.style.transform = '';
+  resetUnder();
+});
+
+// ===== DROPDOWN CHỌN MÔN =====
+function menuOpen(){ return els.subjectWrap.classList.contains('open'); }
+function menuOptions(){ return Array.prototype.slice.call(els.subjectList.querySelectorAll('.subject-option')); }
+
+function syncSubjectUI(){
+  const meta = SUBJECTS.filter(function(s){ return s.id === state.id; })[0];
+  els.subjectName.textContent = meta ? meta.name : 'Chọn môn';
+  menuOptions().forEach(function(o){
+    o.setAttribute('aria-selected', o.dataset.id === state.id ? 'true' : 'false');
+  });
+}
+
+function populateMenu(){
+  els.subjectList.innerHTML = '';
+  SUBJECTS.forEach(function(s){
+    const li = document.createElement('li');
+    li.className = 'subject-option';
+    li.setAttribute('role', 'option');
+    li.dataset.id = s.id;
+    li.tabIndex = -1;
+    li.textContent = s.name;
+    li.setAttribute('aria-selected', 'false');
+    li.addEventListener('click', function(){ activate(s.id); });
+    els.subjectList.appendChild(li);
+  });
+  els.subjectBtn.disabled = SUBJECTS.length === 0;
+  syncSubjectUI();
+}
+
+function openMenu(){
+  if (!SUBJECTS.length || menuOpen()) return;
+  els.subjectWrap.classList.add('open');
+  els.subjectBtn.setAttribute('aria-expanded', 'true');
+  const opts = menuOptions();
+  if (!opts.length) return;
+  let i = -1;
+  opts.forEach(function(o, k){ if (o.dataset.id === state.id) i = k; });
+  focusOption(i < 0 ? 0 : i);
+}
+
+function closeMenu(focusBtn){
+  if (!menuOpen()) return;
+  els.subjectWrap.classList.remove('open');
+  els.subjectBtn.setAttribute('aria-expanded', 'false');
+  if (focusBtn) els.subjectBtn.focus();
+}
+
+function focusOption(i){
+  const opts = menuOptions();
+  if (!opts.length) return;
+  const idx = (i + opts.length) % opts.length;
+  opts.forEach(function(o){ o.tabIndex = -1; });
+  opts[idx].tabIndex = 0;
+  opts[idx].focus();
+  menuIndex = idx;
+}
+
+els.subjectBtn.addEventListener('click', function(e){
+  e.stopPropagation();
+  if (menuOpen()) closeMenu(true); else openMenu();
+});
+els.subjectBtn.addEventListener('keydown', function(e){
+  if (!menuOpen() && e.key === 'ArrowDown'){ e.preventDefault(); openMenu(); }
+});
+els.subjectWrap.addEventListener('keydown', function(e){
+  if (!menuOpen()) return;
+  if (e.key === 'Escape'){ e.preventDefault(); closeMenu(true); return; }
+  if (e.key === 'Tab'){ closeMenu(false); return; }
+  if (e.key === 'ArrowDown'){ e.preventDefault(); focusOption(menuIndex + 1); return; }
+  if (e.key === 'ArrowUp'){ e.preventDefault(); focusOption(menuIndex - 1); return; }
+  if (e.key === 'Home'){ e.preventDefault(); focusOption(0); return; }
+  if (e.key === 'End'){ e.preventDefault(); focusOption(menuOptions().length - 1); return; }
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('subject-option')){
+    e.preventDefault();
+    e.target.click();
+  }
+});
+document.addEventListener('click', function(e){
+  if (!els.subjectWrap.contains(e.target)) closeMenu(false);
+});
+
+// ===== NẠP DỮ LIỆU MÔN =====
+function loadSubjectScript(meta){
+  if (SUBJECT_DATA[meta.id]) return Promise.resolve(SUBJECT_DATA[meta.id]);
+  if (loaders[meta.id]) return loaders[meta.id];
+  loaders[meta.id] = new Promise(function(resolve, reject){
+    const s = document.createElement('script');
+    s.src = meta.src;
+    s.onload = function(){ resolve(SUBJECT_DATA[meta.id] || []); };
+    s.onerror = function(){ reject(new Error('Không tải được dữ liệu môn: ' + meta.src)); };
+    document.head.appendChild(s);
+  });
+  return loaders[meta.id];
+}
+
+function activate(id){
+  const meta = SUBJECTS.filter(function(s){ return s.id === id; })[0];
+  if (!meta || state.loading) return;
+  state.loading = true;
+  els.subjectBtn.setAttribute('aria-busy', 'true');
+  loadSubjectScript(meta).then(function(deck){
+    state.id = id;
+    state.deck = deck || [];
+    state.idx = 0;
+    state.flipped = false;
+    state.known = loadKnown(id);
+    try { localStorage.setItem('fc:last-subject', id); } catch(e){}
+    render(true);
+    syncSubjectUI();
+  }).catch(function(err){
+    state.id = id;
+    state.deck = [];
+    state.known = {};
+    render(true);
+    els.front.innerHTML = '<p class="q">' + (err && err.message ? err.message : 'Lỗi tải dữ liệu') + '</p>';
+    els.back.innerHTML = '';
+    syncSubjectUI();
+  }).then(function(){
+    state.loading = false;
+    els.subjectBtn.removeAttribute('aria-busy');
+    closeMenu(false);
+  });
+}
+
+// ===== NÚT + BÀN PHÍM =====
+els.flip.addEventListener('click', doFlip);
+els.prev.addEventListener('click', function(){ animateNav(-1); });
+els.next.addEventListener('click', function(){ animateNav(1); });
+els.mark.addEventListener('click', toggleKnown);
+
+document.addEventListener('keydown', function(e){
+  const t = e.target;
+  if (t && (t.tagName === 'BUTTON' || t.tagName === 'SELECT' || t.classList.contains('subject-option'))) return;
+  if (e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); doFlip(); }
+  else if (e.key === 'ArrowRight'){ e.preventDefault(); animateNav(1); }
+  else if (e.key === 'ArrowLeft'){ e.preventDefault(); animateNav(-1); }
+  else if (e.key.toLowerCase() === 'm'){ e.preventDefault(); toggleKnown(); }
+});
+
+// ===== KHỞI ĐỘNG =====
+populateMenu();
+var lastSubject = null;
+try { lastSubject = localStorage.getItem('fc:last-subject'); } catch(e){}
+var initial = SUBJECTS.filter(function(s){ return s.id === lastSubject; })[0] || SUBJECTS[0];
+if (initial){ activate(initial.id); }
+else { render(true); }
+window.addEventListener('load', function(){
+  if (initial) requestAnimationFrame(function(){ Anim.enter(els.swipe); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Chỉ deploy phần web cần thiết
+.git/
+.scratch/
+.tmp/
+.dsh-vision-router/
+.playwright-mcp/
+docs/
+AGENTS.md
+check.mjs
+*.ppt
+~$*
