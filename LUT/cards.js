@@ -52,5 +52,55 @@ window.SUBJECT_DATA["luat-ck"] = [
 <p class="tag">Lưu ý (slide 12)</p>
 <p>Hệ thống gồm 2 bộ phận: pháp luật chuyên ngành (Luật CK, NĐ, TT hướng dẫn) và pháp luật có liên quan (đầu tư, doanh nghiệp, kế toán, ngân hàng…).</p>
 <p class="src">Nguồn: slide 12, 13, 14, 17 · Luật Chứng khoán 2019 · NĐ 155/2020/NĐ-CP · TT 116/2020/TT-BTC</p>`
+  },
+  {
+    id: "cd1-s15-q1-chao-ban-ldn-lck",
+    front: `<p class="q">Khi nào đợt chào bán cổ phiếu/cổ phần thuộc Luật Doanh nghiệp, khi nào thuộc Luật Chứng khoán?</p>`,
+    back: `<p class="tag">Luật Chứng khoán điều chỉnh</p>
+<ul>
+  <li><strong>Chào bán ra công chúng</strong> (mọi tổ chức phát hành): qua phương tiện thông tin đại chúng; cho từ 100 nhà đầu tư trở lên không kể chuyên nghiệp; hoặc cho nhà đầu tư không xác định (khoản 19 Điều 4; Điều 14–19 LCK).</li>
+  <li><strong>Chào bán riêng lẻ / cho cổ đông hiện hữu của công ty đại chúng, CTCK, CTQLQ</strong> — kể cả CTCK/CTQLQ chưa đại chúng (Điều 31 LCK; khoản 5 Điều 31 cho phát hành cho cổ đông hiện hữu).</li>
+</ul>
+<p class="tag">Luật Doanh nghiệp điều chỉnh</p>
+<ul>
+  <li>Chào bán <strong>riêng lẻ</strong> (hoặc cho cổ đông hiện hữu) của tổ chức phát hành <strong>không phải công ty đại chúng</strong> và không phải CTCK/CTQLQ → Điều 30 LCK dẫn chiếu LDN; LDN Điều 123, 125.</li>
+  <li>LDN Điều 123 khoản 3: chào bán ra công chúng, chào bán của công ty đại chúng và tổ chức khác thực hiện theo pháp luật về chứng khoán.</li>
+</ul>
+<p class="tag">Mốc phân biệt</p>
+<p>Ra công chúng → LCK. Riêng lẻ → xem tổ chức phát hành: đại chúng/CTCK/CTQLQ → LCK; còn lại → LDN. Công ty đại chúng vẫn theo LDN ở thủ tục nội bộ (ĐHĐCĐ…).</p>
+<p class="src">Nguồn: slide 15 · LCK 2019 (Điều 4 khoản 19–20; Điều 14–16, 30, 31) · LDN 2020 (Điều 123–125)</p>`
+  },
+  {
+    id: "cd1-s15-q2-ubcknn-vbqppl",
+    front: `<p class="q">UBCKNN có thẩm quyền xây dựng và ban hành VBQPPL không? Tại sao?</p>`,
+    back: `<p class="tag">Không</p>
+<ul>
+  <li>UBCKNN là cơ quan thuộc Bộ Tài chính (khoản 1 Điều 9 LCK), không thuộc chủ thể ban hành VBQPPL tại Điều 4 Luật BHVBQPPL 2025.</li>
+  <li>Nhiệm vụ: <strong>trình Bộ trưởng Bộ Tài chính</strong> ban hành hoặc để trình cấp có thẩm quyền ban hành VBQPPL về CK & TTCK (điểm a khoản 1 Điều 9 LCK).</li>
+  <li>UBCKNN chỉ ban hành văn bản cá biệt (quyết định cấp phép, xử lý vi phạm…) và quy chế nội bộ — không phải VBQPPL.</li>
+</ul>
+<p class="tag">Hệ quả</p>
+<p>Muốn ban hành quy phạm mới: Bộ Tài chính → Thông tư; Chính phủ → Nghị định; Quốc hội → Luật.</p>
+<p class="src">Nguồn: slide 15 · LCK 2019 (Điều 9) · Luật BHVBQPPL 2025 (Điều 4)</p>`
+  },
+  {
+    id: "cd1-s15-q3-ldn-ctck",
+    front: `<p class="q">CTCK, CTQLQĐTCK chịu sự điều chỉnh của Luật Doanh nghiệp như thế nào? Cho ví dụ.</p>`,
+    back: `<p class="tag">LDN điều chỉnh (tư cách doanh nghiệp)</p>
+<ul>
+  <li>Thành lập, điều lệ, cơ cấu tổ chức (ĐHĐCĐ, HĐQT, BKS/UBKT), quyền và nghĩa vụ cổ đông.</li>
+  <li>Tăng/giảm vốn, chào bán cổ phần (Điều 123–125), mua lại cổ phần, hợp nhất/sáp nhập, giải thể.</li>
+</ul>
+<p class="tag">LCK điều chỉnh (chuyên ngành)</p>
+<ul>
+  <li>Giấy phép thành lập và hoạt động, vốn pháp định, nghiệp vụ, nhân sự có chứng chỉ, giới hạn đầu tư, báo cáo, quản trị công ty đại chúng.</li>
+</ul>
+<p class="tag">Ví dụ</p>
+<ul>
+  <li>CTCK (CTCP) phát hành cho cổ đông hiện hữu: thủ tục ĐHĐCĐ theo LDN (Điều 124); điều kiện chào bán theo LCK — kể cả khi chưa đại chúng (khoản 5 Điều 31).</li>
+  <li>Sáp nhập CTCK: trình tự theo LDN + phải được UBCKNN chấp thuận theo LCK.</li>
+  <li>CTCK/CTQLQ là CTCP hoặc TNHH: LDN quy định loại hình, điều lệ; LCK Điều 74 quy định điều kiện cổ đông/thành viên góp vốn.</li>
+</ul>
+<p class="src">Nguồn: slide 15 · LDN 2020 (Điều 123–125) · LCK 2019 (Điều 9, 31, 74)</p>`
   }
 ];
