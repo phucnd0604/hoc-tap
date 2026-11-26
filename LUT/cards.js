@@ -216,5 +216,203 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li><strong>b sai:</strong> không phải “tất cả” — chào bán riêng lẻ của tổ chức phát hành không phải công ty đại chúng thực hiện theo Luật Doanh nghiệp (Điều 30 Luật Chứng khoán dẫn chiếu).</li>
 </ul>
 <p class="src">Nguồn: slide 47 · Luật Chứng khoán 2019 (Điều 1; Điều 30)</p>`
+  },
+  {
+    id: "cd1-s48-chung-khoan-khong-bao-gom",
+    front: `<p class="q">Theo Luật Chứng khoán 2019, chứng khoán KHÔNG bao gồm loại nào sau đây?</p><p class="q">1. Chứng khoán phái sinh<br>2. Chứng chỉ lưu ký<br>3. Chứng quyền có bảo đảm<br>4. Tín phiếu, hối phiếu</p>`,
+    back: `<p class="tag">Đáp án: 4 — Tín phiếu, hối phiếu</p><ul><li>Khoản 1 Điều 4 Luật Chứng khoán 2019 liệt kê chứng khoán gồm: cổ phiếu, trái phiếu, chứng chỉ quỹ; chứng quyền, chứng quyền có bảo đảm, quyền mua cổ phần, chứng chỉ lưu ký; chứng khoán phái sinh; các loại khác do Chính phủ quy định.</li><li>Hối phiếu là công cụ chuyển nhượng theo pháp luật về các công cụ chuyển nhượng, không phải chứng khoán; tín phiếu kho bạc cũng không thuộc danh mục chứng khoán của Luật Chứng khoán.</li></ul><p class="src">Nguồn: slide 48 · Luật Chứng khoán 2019 (khoản 1 Điều 4)</p>`
+  },
+  {
+    id: "cd1-s49-chung-khoan-phai-sinh",
+    front: `<p class="q">Theo pháp luật chứng khoán và thị trường chứng khoán, loại chứng khoán nào sau đây là chứng khoán phái sinh?</p><p class="q">A. Hợp đồng tương lai, hợp đồng quyền chọn<br>B. Quyền mua cổ phần<br>C. Chứng quyền<br>D. Tất cả các phương án đều đúng</p>`,
+    back: `<p class="tag">Đáp án: A</p><ul><li>Hợp đồng tương lai và hợp đồng quyền chọn là chứng khoán phái sinh theo khoản 1 Điều 4 Luật Chứng khoán 2019 (chứng khoán phái sinh là một loại chứng khoán).</li><li>Quyền mua cổ phần và chứng quyền là chứng khoán cơ sở (điểm b khoản 1 Điều 4), không phải chứng khoán phái sinh.</li><li>D sai vì B và C không phải chứng khoán phái sinh.</li></ul><p class="src">Nguồn: slide 49 · Luật Chứng khoán 2019 (khoản 1 Điều 4; Nghị định 155/2020/NĐ-CP)</p>`
+  },
+  {
+    id: "cd1-s50-dinh-chi-giao-dich",
+    front: `<p class="q">Ủy ban Chứng khoán Nhà nước thực hiện đình chỉ giao dịch chứng khoán khi nào?</p><p class="q">A. Tổ chức niêm yết, tổ chức đăng ký giao dịch không có biện pháp khắc phục nguyên nhân dẫn đến việc chứng khoán bị đưa vào diện cảnh báo, kiểm soát, hạn chế giao dịch<br>B. Khối lượng giao dịch quá lớn<br>C. Khi có nhà đầu tư nước ngoài mua vượt tỷ lệ sở hữu<br>D. Không có trường hợp nào</p>`,
+    back: `<p class="tag">Đáp án: A</p><ul><li>Đình chỉ giao dịch đối với chứng khoán là biện pháp bảo vệ thị trường, áp dụng khi tổ chức niêm yết, tổ chức đăng ký giao dịch không khắc phục được nguyên nhân khiến chứng khoán bị đưa vào diện cảnh báo, kiểm soát, hạn chế giao dịch (Nghị định 155/2020/NĐ-CP quy định về đưa chứng khoán vào diện cảnh báo, kiểm soát, hạn chế giao dịch và tạm ngừng, đình chỉ giao dịch).</li><li>B, C không phải căn cứ đình chỉ giao dịch; D sai vì A là căn cứ đúng.</li></ul><p class="src">Nguồn: slide 50 · Luật Chứng khoán 2019 (Điều 9, Điều 49) · Nghị định 155/2020/NĐ-CP</p>`
+  },
+  {
+    id: "cd1-s51-trinh-tu-thanh-lap-ctck",
+    front: `<p class="q">Theo Luật Chứng khoán 2019, để thành lập công ty chứng khoán, thủ tục nào đúng?</p><p class="q">A. Đăng ký doanh nghiệp tại cơ quan đăng ký kinh doanh trước, sau đó nộp hồ sơ đề nghị Ủy ban Chứng khoán Nhà nước cấp Giấy phép thành lập và hoạt động<br>B. Nộp hồ sơ đề nghị Ủy ban Chứng khoán Nhà nước cấp Giấy phép thành lập và hoạt động trước, sau đó thực hiện đăng ký doanh nghiệp tại cơ quan đăng ký kinh doanh<br>C. Giấy chứng nhận của Ủy ban Chứng khoán Nhà nước đồng thời là Giấy chứng nhận đăng ký doanh nghiệp nên không cần đăng ký doanh nghiệp<br>D. Không bắt buộc phải thực hiện cả hai thủ tục</p>`,
+    back: `<p class="tag">Đáp án: B</p><ul><li>Khoản 1 Điều 71 Luật Chứng khoán 2019: sau khi được cấp Giấy phép thành lập và hoạt động kinh doanh chứng khoán, công ty chứng khoán phải đăng ký doanh nghiệp theo quy định của Luật Doanh nghiệp.</li><li>A sai thứ tự; C sai vì giấy phép của Ủy ban Chứng khoán Nhà nước không thay thế đăng ký doanh nghiệp; D sai vì bắt buộc cả hai thủ tục.</li></ul><p class="src">Nguồn: slide 51 · Luật Chứng khoán 2019 (khoản 1 Điều 71)</p>`
+  },
+  {
+    id: "cd1-s53-co-dong-lon",
+    front: `<p class="q">Cổ đông lớn là người sở hữu cổ phiếu có quyền biểu quyết của công ty đại chúng:</p><p class="q">A. Từ 5% trở lên<br>B. Từ 5% trở lên và nắm giữ liên tục ít nhất 6 tháng tại một công ty đại chúng<br>C. Từ 10% trở lên<br>D. Từ 15% trở lên</p>`,
+    back: `<p class="tag">Đáp án: A</p><ul><li>Khoản 18 Điều 4 Luật Chứng khoán 2019: cổ đông lớn là cổ đông sở hữu từ 5% trở lên số cổ phiếu có quyền biểu quyết của một tổ chức phát hành.</li><li>B sai vì luật không yêu cầu thời gian nắm giữ 6 tháng; C, D sai mức tỷ lệ.</li></ul><p class="src">Nguồn: slide 53 · Luật Chứng khoán 2019 (khoản 18 Điều 4)</p>`
+  },
+  {
+    id: "cd1-s54-sgdc-to-chuc-thi-truong",
+    front: `<p class="q">Theo quy định hiện hành, Sở Giao dịch Chứng khoán tổ chức thị trường giao dịch cho loại chứng khoán nào sau đây?</p>
+<p class="q">A. Tín phiếu kho bạc<br>B. Hợp đồng bảo hiểm<br>C. Cổ phiếu của công ty cổ phần chưa đại chúng<br>D. Chứng quyền có bảo đảm</p>`,
+    back: `<p class="tag">Đáp án: D</p>
+<ul>
+  <li>Khoản 1 Điều 42 Luật Chứng khoán 2019: Sở Giao dịch Chứng khoán Việt Nam và công ty con tổ chức thị trường cho chứng khoán đủ điều kiện niêm yết; chứng khoán của doanh nghiệp nhà nước chuyển đổi thành công ty cổ phần; chứng khoán của doanh nghiệp khác chưa đủ điều kiện niêm yết; chứng khoán của doanh nghiệp khởi nghiệp sáng tạo; chứng khoán phái sinh và loại khác theo quy định của Chính phủ.</li>
+  <li>Chứng quyền có bảo đảm là chứng khoán được niêm yết, đăng ký giao dịch trên Sở Giao dịch Chứng khoán.</li>
+  <li>Tín phiếu kho bạc, hợp đồng bảo hiểm, cổ phiếu của công ty cổ phần chưa đại chúng không thuộc phạm vi tổ chức thị trường nêu trên.</li>
+</ul>
+<p class="src">Nguồn: slide 54 · Luật Chứng khoán 2019 (khoản 1 Điều 42)</p>`
+  },
+  {
+    id: "cd1-s55-phuong-an-su-dung-von",
+    front: `<p class="q">Theo Luật Chứng khoán 2019 (sửa đổi bởi Luật số 56/2024/QH15), tổ chức chào bán chứng khoán ra công chúng phải có phương án sử dụng vốn thu được từ đợt chào bán:</p>
+<p class="q">A. Được phê duyệt và thông qua bởi Hội đồng quản trị<br>B. Thuộc thẩm quyền của Ban Giám đốc/Ban Điều hành<br>C. Được Đại hội đồng cổ đông thông qua<br>D. Được Ủy ban Chứng khoán Nhà nước phê duyệt phương án</p>`,
+    back: `<p class="tag">Đáp án: C</p>
+<ul>
+  <li>Điểm c khoản 1 Điều 15 Luật Chứng khoán 2019: điều kiện chào bán cổ phiếu lần đầu ra công chúng gồm có phương án phát hành và phương án sử dụng vốn thu được từ đợt chào bán cổ phiếu được Đại hội đồng cổ đông thông qua.</li>
+  <li>A, B sai thẩm quyền; D sai vì Ủy ban Chứng khoán Nhà nước không phê duyệt phương án sử dụng vốn.</li>
+</ul>
+<p class="src">Nguồn: slide 55 · Luật Chứng khoán 2019 (điểm c khoản 1 Điều 15; Luật số 56/2024/QH15)</p>`
+  },
+  {
+    id: "cd1-s56-cong-bo-thong-tin-bat-thuong",
+    front: `<p class="q">Công ty đại chúng có trách nhiệm công bố thông tin bất thường trong thời hạn:</p>
+<p class="q">A. 12 giờ<br>B. 24 giờ<br>C. 36 giờ<br>D. 48 giờ</p>`,
+    back: `<p class="tag">Đáp án: B — 24 giờ</p>
+<ul>
+  <li>Theo Thông tư 96/2020/TT-BTC hướng dẫn công bố thông tin trên thị trường chứng khoán, công ty đại chúng phải công bố thông tin bất thường trong thời hạn 24 giờ kể từ khi xảy ra sự kiện.</li>
+  <li>12, 36, 48 giờ không đúng thời hạn luật định.</li>
+</ul>
+<p class="src">Nguồn: slide 56 · Thông tư 96/2020/TT-BTC (quy định công bố thông tin bất thường)</p>`
+  },
+  {
+    id: "cd1-s57-to-chuc-kinh-doanh-chung-khoan",
+    front: `<p class="q">Tổ chức nào dưới đây không thuộc hệ thống các tổ chức kinh doanh chứng khoán?</p>
+<p class="q">A. Công ty chứng khoán<br>B. Công ty quản lý quỹ đầu tư chứng khoán<br>C. Quỹ đầu tư chứng khoán<br>D. Ngân hàng thương mại</p>`,
+    back: `<p class="tag">Đáp án: C — Quỹ đầu tư chứng khoán</p>
+<ul>
+  <li>Quỹ đầu tư chứng khoán không phải tổ chức kinh doanh chứng khoán: quỹ là tài sản đầu tư do công ty quản lý quỹ quản lý, không trực tiếp thực hiện nghiệp vụ kinh doanh chứng khoán.</li>
+  <li>Công ty chứng khoán và công ty quản lý quỹ đầu tư chứng khoán là các tổ chức kinh doanh chứng khoán (Chương VI Luật Chứng khoán 2019).</li>
+  <li>Lưu ý: ngân hàng thương mại không thuộc nhóm công ty kinh doanh chứng khoán chuyên ngành, nhưng tham gia thị trường với tư cách thành viên lưu ký, thành viên giao dịch đặc biệt, ngân hàng thanh toán.</li>
+</ul>
+<p class="src">Nguồn: slide 57 · Luật Chứng khoán 2019 (Chương VI; Điều 47, Điều 56)</p>`
+  },
+  {
+    id: "cd1-s58-thanh-vien-luu-ky",
+    front: `<p class="q">Tổ chức nào là thành viên lưu ký của Tổng công ty Lưu ký và Bù trừ Chứng khoán Việt Nam?</p>
+<p class="q">1. Các công ty đại chúng niêm yết<br>2. Công ty chứng khoán và ngân hàng thương mại được Ủy ban Chứng khoán Nhà nước cấp Giấy chứng nhận đăng ký hoạt động lưu ký chứng khoán và được Tổng công ty Lưu ký và Bù trừ Chứng khoán Việt Nam chấp thuận<br>3. Chỉ công ty chứng khoán<br>4. Nhà đầu tư</p>`,
+    back: `<p class="tag">Đáp án: 2</p>
+<ul>
+  <li>Khoản 1 Điều 56 Luật Chứng khoán 2019: thành viên lưu ký là công ty chứng khoán, ngân hàng thương mại, chi nhánh ngân hàng nước ngoài được Ủy ban Chứng khoán Nhà nước cấp Giấy chứng nhận đăng ký hoạt động lưu ký chứng khoán và được Tổng công ty Lưu ký và Bù trừ Chứng khoán Việt Nam chấp thuận trở thành thành viên lưu ký.</li>
+  <li>1 sai (công ty đại chúng niêm yết không phải thành viên lưu ký); 3 sai (không chỉ công ty chứng khoán); 4 sai (nhà đầu tư không phải thành viên lưu ký).</li>
+</ul>
+<p class="src">Nguồn: slide 58 · Luật Chứng khoán 2019 (khoản 1 Điều 56)</p>`
+  },
+  {
+    id: "cd1-s59-thanh-tra-ubcknn",
+    front: `<p class="q">Ủy ban Chứng khoán Nhà nước có quyền gì trong thanh tra, kiểm tra tổ chức kinh doanh chứng khoán?</p>
+<p class="q">A. Quyết định khởi tố hình sự<br>B. Kiểm tra công tác bảo vệ bí mật nhà nước liên quan đến hoạt động của tổ chức kinh doanh chứng khoán<br>C. Truy thu thuế<br>D. Yêu cầu tổ chức, cá nhân đến làm việc liên quan đến nội dung thanh tra, kiểm tra</p>`,
+    back: `<p class="tag">Đáp án: D</p>
+<ul>
+  <li>Trong thanh tra, kiểm tra, Ủy ban Chứng khoán Nhà nước có quyền yêu cầu tổ chức, cá nhân cung cấp thông tin, tài liệu và đến làm việc theo nội dung thanh tra, kiểm tra (Điều 9 Luật Chứng khoán 2019 và pháp luật về thanh tra).</li>
+  <li>A sai: quyết định khởi tố hình sự thuộc cơ quan điều tra, viện kiểm sát; B sai: không phải quyền thanh tra chứng khoán; C sai: truy thu thuế thuộc cơ quan thuế.</li>
+</ul>
+<p class="src">Nguồn: slide 59 · Luật Chứng khoán 2019 (Điều 9)</p>`
+  },
+  {
+    id: "cd1-s60-hanh-vi-phu-hop",
+    front: `<p class="q">Hành vi nào sau đây là phù hợp với quy định của pháp luật chứng khoán?</p>
+<p class="q">A. Sử dụng thông tin nội bộ để mua bán chứng khoán<br>B. Gọi điện thoại yêu cầu công ty chứng khoán nơi mình mở tài khoản để đặt lệnh mua chứng khoán<br>C. Nhà đầu tư trực tiếp ký hợp đồng với nhân viên có chứng chỉ hành nghề của công ty chứng khoán để ủy thác việc mua bán chứng khoán<br>D. Công ty chứng khoán nhận ủy quyền của khách hàng thực hiện chuyển tiền nội bộ giữa các tài khoản của các khách hàng trong công ty chứng khoán</p>`,
+    back: `<p class="tag">Đáp án: B</p>
+<ul>
+  <li>Đặt lệnh mua chứng khoán qua điện thoại với công ty chứng khoán nơi mở tài khoản là giao dịch thông thường, phù hợp quy định (công ty chứng khoán phải ghi âm, lưu trữ theo quy chế).</li>
+  <li>A sai: sử dụng thông tin nội bộ để mua bán chứng khoán là hành vi bị nghiêm cấm (khoản 2 Điều 12 Luật Chứng khoán 2019).</li>
+  <li>C sai: nhà đầu tư phải ký hợp đồng với công ty chứng khoán, không ký với nhân viên; nhân viên không được nhận ủy thác của khách hàng.</li>
+  <li>D sai: công ty chứng khoán không được thực hiện chuyển tiền nội bộ giữa tài khoản của các khách hàng (vi phạm quản lý tách biệt tài sản khách hàng).</li>
+</ul>
+<p class="src">Nguồn: slide 60 · Luật Chứng khoán 2019 (Điều 12, Điều 89)</p>`
+  },
+  {
+    id: "cd1-s61-sgdc-viet-nam",
+    front: `<p class="q">Sở Giao dịch Chứng khoán Việt Nam là:</p>
+<p class="q">A. Doanh nghiệp tư nhân<br>B. Công ty cổ phần<br>C. Nhà nước nắm giữ trên 50% vốn điều lệ<br>D. Cơ quan quản lý nhà nước về tổ chức thị trường giao dịch chứng khoán</p>`,
+    back: `<p class="tag">Đáp án: C</p>
+<ul>
+  <li>Khoản 1 Điều 43 Luật Chứng khoán 2019: Sở Giao dịch Chứng khoán Việt Nam là doanh nghiệp được thành lập và hoạt động theo Luật Chứng khoán và Luật Doanh nghiệp, do Nhà nước nắm giữ trên 50% vốn điều lệ hoặc tổng số cổ phần có quyền biểu quyết.</li>
+  <li>A sai; B chưa đủ vì hình thức doanh nghiệp do Thủ tướng Chính phủ quyết định; D sai vì Sở Giao dịch Chứng khoán không phải cơ quan quản lý nhà nước mà chịu sự quản lý, giám sát của Ủy ban Chứng khoán Nhà nước.</li>
+</ul>
+<p class="src">Nguồn: slide 61 · Luật Chứng khoán 2019 (khoản 1 Điều 43)</p>`
+  },
+  {
+    id: "cd1-s62-thanh-vien-giao-dich",
+    front: `<p class="q">Thành viên giao dịch trên Sở Giao dịch Chứng khoán bao gồm:</p>
+<p class="q">A. Công ty đại chúng<br>B. Công ty chứng khoán<br>C. Công ty niêm yết trên Sở Giao dịch Chứng khoán<br>D. Nhà đầu tư chứng khoán</p>`,
+    back: `<p class="tag">Đáp án: B</p>
+<ul>
+  <li>Khoản 1 Điều 47 Luật Chứng khoán 2019: thành viên giao dịch là công ty chứng khoán được Sở Giao dịch Chứng khoán Việt Nam chấp thuận trở thành thành viên giao dịch.</li>
+  <li>Ngoài ra còn có thành viên giao dịch đặc biệt là ngân hàng thương mại, chi nhánh ngân hàng nước ngoài và tổ chức khác được chấp thuận.</li>
+  <li>A, C, D không phải thành viên giao dịch.</li>
+</ul>
+<p class="src">Nguồn: slide 62 · Luật Chứng khoán 2019 (khoản 1 Điều 47)</p>`
+  },
+  {
+    id: "cd1-s63-cong-ty-dai-chung-30-ty",
+    front: `<p class="q">Theo Luật Chứng khoán 2019, công ty đại chúng là công ty cổ phần có vốn điều lệ đã góp từ bao nhiêu trở lên?</p>
+<p class="q">A. 10 tỷ đồng<br>B. 30 tỷ đồng<br>C. 50 tỷ đồng<br>D. 100 tỷ đồng</p>`,
+    back: `<p class="tag">Đáp án: B — 30 tỷ đồng</p>
+<ul>
+  <li>Điểm a khoản 1 Điều 32 Luật Chứng khoán 2019: công ty đại chúng là công ty cổ phần có vốn điều lệ đã góp từ 30 tỷ đồng trở lên, có vốn chủ sở hữu từ 30 tỷ đồng trở lên và có tối thiểu 10% số cổ phiếu có quyền biểu quyết do ít nhất 100 nhà đầu tư không phải cổ đông lớn nắm giữ.</li>
+  <li>Công ty đã chào bán thành công cổ phiếu lần đầu ra công chúng thông qua đăng ký với Ủy ban Chứng khoán Nhà nước cũng là công ty đại chúng (điểm b khoản 1 Điều 32).</li>
+</ul>
+<p class="src">Nguồn: slide 63 · Luật Chứng khoán 2019 (khoản 1 Điều 32)</p>`
+  },
+  {
+    id: "cd1-s64-chao-ban-them-dieu-kien",
+    front: `<p class="q">Tổ chức chào bán thêm cổ phiếu ra công chúng phải đáp ứng điều kiện có kết quả hoạt động kinh doanh của năm liền trước năm đăng ký chào bán:</p>
+<p class="q">A. Có lãi, đồng thời không có lỗ lũy kế tính đến năm đăng ký chào bán<br>B. Không có lỗ lũy kế tính đến thời điểm nộp hồ sơ đăng ký chào bán với Ủy ban Chứng khoán Nhà nước<br>C. Không có khoản vay ngân hàng quá hạn<br>D. Không có vi phạm về thuế</p>`,
+    back: `<p class="tag">Đáp án: A</p>
+<ul>
+  <li>Điểm b khoản 2 Điều 15 Luật Chứng khoán 2019: điều kiện chào bán thêm cổ phiếu ra công chúng của công ty đại chúng gồm hoạt động kinh doanh của năm liền trước năm đăng ký chào bán phải có lãi, đồng thời không có lỗ lũy kế tính đến năm đăng ký chào bán.</li>
+  <li>B, C, D không phải điều kiện của luật.</li>
+</ul>
+<p class="src">Nguồn: slide 64 · Luật Chứng khoán 2019 (điểm b khoản 2 Điều 15)</p>`
+  },
+  {
+    id: "cd1-s65-dieu-kien-chao-ban-ra-cong-chung",
+    front: `<p class="q">Theo Luật Chứng khoán 2019, đâu là một trong các điều kiện chào bán chứng khoán ra công chúng?</p>
+<p class="q">A. Có vốn điều lệ đã góp tại thời điểm đăng ký chào bán từ 20 tỷ đồng trở lên<br>B. Có tối thiểu 15% số cổ phiếu có quyền biểu quyết của tổ chức phát hành phải được bán cho ít nhất 100 nhà đầu tư không phải là cổ đông lớn<br>C. Có phương án phát hành và phương án sử dụng vốn thu được từ đợt chào bán được Đại hội đồng cổ đông thông qua<br>D. Có hợp đồng bảo lãnh phát hành chứng khoán</p>`,
+    back: `<p class="tag">Đáp án: C</p>
+<ul>
+  <li>Điểm c khoản 1 Điều 15 Luật Chứng khoán 2019: có phương án phát hành và phương án sử dụng vốn thu được từ đợt chào bán cổ phiếu được Đại hội đồng cổ đông thông qua. Điều kiện này được dẫn chiếu cho cả chào bán thêm cổ phiếu (điểm a khoản 2 Điều 15).</li>
+  <li>A sai: vốn điều lệ đã góp tối thiểu là 30 tỷ đồng, không phải 20 tỷ đồng.</li>
+  <li>B cũng là điều kiện nhưng chỉ áp dụng với chào bán cổ phiếu lần đầu ra công chúng (điểm d khoản 1 Điều 15), không phải điều kiện chung cho mọi đợt chào bán ra công chúng.</li>
+  <li>D sai: bảo lãnh phát hành không bắt buộc.</li>
+</ul>
+<p class="src">Nguồn: slide 65 · Luật Chứng khoán 2019 (khoản 1 và khoản 2 Điều 15)</p>`
+  },
+  {
+    id: "cd1-s66-khong-phai-chung-khoan-phai-sinh",
+    front: `<p class="q">Theo Luật Chứng khoán 2019, loại chứng khoán nào sau đây KHÔNG được coi là chứng khoán phái sinh?</p>
+<p class="q">A. Hợp đồng quyền chọn<br>B. Hợp đồng tương lai<br>C. Hợp đồng kỳ hạn<br>D. Cổ phiếu ưu đãi biểu quyết</p>`,
+    back: `<p class="tag">Đáp án: D</p>
+<ul>
+  <li>Cổ phiếu ưu đãi biểu quyết là cổ phiếu — chứng khoán cơ sở, không phải chứng khoán phái sinh.</li>
+  <li>Hợp đồng quyền chọn, hợp đồng tương lai, hợp đồng kỳ hạn là các loại chứng khoán phái sinh theo khoản 1 Điều 4 Luật Chứng khoán 2019 và quy định chi tiết của Chính phủ.</li>
+</ul>
+<p class="src">Nguồn: slide 66 · Luật Chứng khoán 2019 (khoản 1 Điều 4; Nghị định 155/2020/NĐ-CP)</p>`
+  },
+  {
+    id: "cd1-s67-huy-tu-cach-cong-ty-dai-chung",
+    front: `<p class="q">Công ty đại chúng bị hủy tư cách đại chúng khi:</p>
+<p class="q">A. Không thực hiện công bố thông tin trong 02 năm liên tục về báo cáo tài chính năm được kiểm toán<br>B. Chậm thực hiện nghĩa vụ thuế và có yêu cầu của cơ quan thuế về việc hủy tư cách công ty đại chúng<br>C. Công ty có thông báo của Tòa án về việc mở thủ tục phá sản<br>D. Có cổ đông là nhà đầu tư chiến lược rút vốn</p>`,
+    back: `<p class="tag">Đáp án: A</p>
+<ul>
+  <li>Điểm b khoản 1 Điều 38 Luật Chứng khoán 2019: công ty đại chúng bị hủy tư cách khi không thực hiện công bố thông tin trong 02 năm liên tục về báo cáo tài chính năm được kiểm toán.</li>
+  <li>Các trường hợp khác gồm: không còn đáp ứng điều kiện công ty đại chúng (điểm a); không công bố thông tin 02 năm liên tục về nghị quyết Đại hội đồng cổ đông thường niên (điểm c); không đăng ký lưu ký hoặc không niêm yết, đăng ký giao dịch trong thời hạn 01 năm (điểm d).</li>
+  <li>B, C, D không thuộc các trường hợp hủy tư cách.</li>
+</ul>
+<p class="src">Nguồn: slide 67 · Luật Chứng khoán 2019 (khoản 1 Điều 38)</p>`
+  },
+  {
+    id: "cd1-s68-tham-quyen-xu-phat",
+    front: `<p class="q">Người có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực chứng khoán và thị trường chứng khoán là:</p>
+<p class="q">A. Chủ tịch Ủy ban Chứng khoán Nhà nước; Chánh thanh tra Ủy ban Chứng khoán Nhà nước; Trưởng đoàn thanh tra chuyên ngành của Ủy ban Chứng khoán Nhà nước; Chủ tịch Ủy ban nhân dân cấp tỉnh<br>B. Bộ trưởng Bộ Tài chính; Chủ tịch Ủy ban Chứng khoán Nhà nước; Chánh thanh tra Ủy ban Chứng khoán Nhà nước<br>C. Bộ trưởng Bộ Tài chính; Chủ tịch Ủy ban Chứng khoán Nhà nước<br>D. Chủ tịch Ủy ban Chứng khoán Nhà nước; Chánh thanh tra Ủy ban Chứng khoán Nhà nước; Trưởng đoàn thanh tra chuyên ngành của Ủy ban Chứng khoán Nhà nước; Chủ tịch Ủy ban nhân dân các cấp</p>`,
+    back: `<p class="tag">Đáp án: A</p>
+<ul>
+  <li>Theo Nghị định 156/2020/NĐ-CP (được sửa đổi, bổ sung) quy định xử phạt vi phạm hành chính trong lĩnh vực chứng khoán và thị trường chứng khoán, thẩm quyền xử phạt gồm: Chủ tịch Ủy ban Chứng khoán Nhà nước; Chánh thanh tra Ủy ban Chứng khoán Nhà nước; Trưởng đoàn thanh tra chuyên ngành của Ủy ban Chứng khoán Nhà nước; Chủ tịch Ủy ban nhân dân cấp tỉnh.</li>
+  <li>B, C sai vì không bao gồm Bộ trưởng Bộ Tài chính trong danh sách này; D sai vì chỉ Chủ tịch Ủy ban nhân dân cấp tỉnh, không phải Ủy ban nhân dân các cấp.</li>
+</ul>
+<p class="src">Nguồn: slide 68 · Nghị định 156/2020/NĐ-CP (quy định thẩm quyền xử phạt vi phạm hành chính về chứng khoán)</p>`
   }
 ];
