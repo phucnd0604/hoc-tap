@@ -211,7 +211,7 @@ window.SUBJECT_DATA["luat-ck"] = [
 <p class="q">a) Thành lập, tổ chức và hoạt động của công ty đại chúng<br>b) Tất cả hoạt động chào bán, phát hành chứng khoán của doanh nghiệp<br>c) Chào bán chứng khoán ra công chúng và chào bán, phát hành của công ty đại chúng</p>`,
     back: `<p class="tag">Đáp án: c</p>
 <ul>
-  <li><strong>c đúng:</strong> Điều 1 Luật Chứng khoán 2019 quy định về chào bán chứng khoán ra công chúng; chào bán, phát hành chứng khoán của công ty đại chúng.</li>
+  <li><strong>c đúng:</strong> chào bán chứng khoán ra công chúng và chào bán, phát hành chứng khoán của công ty đại chúng là các hoạt động thuộc phạm vi điều chỉnh của Luật Chứng khoán (Chương II, từ Điều 13 đến Điều 31); Điều 1 hiện hành quy định Luật điều chỉnh các hoạt động về chứng khoán và thị trường chứng khoán.</li>
   <li><strong>a sai:</strong> việc thành lập, tổ chức và hoạt động của doanh nghiệp (kể cả công ty đại chúng) do Luật Doanh nghiệp điều chỉnh; Luật Chứng khoán chỉ điều chỉnh các nội dung chuyên ngành về công ty đại chúng (điều kiện trở thành, đăng ký, quyền và nghĩa vụ, quản trị công ty đại chúng).</li>
   <li><strong>b sai:</strong> không phải “tất cả” — chào bán riêng lẻ của tổ chức phát hành không phải công ty đại chúng thực hiện theo Luật Doanh nghiệp (Điều 30 Luật Chứng khoán dẫn chiếu).</li>
 </ul>
@@ -220,17 +220,17 @@ window.SUBJECT_DATA["luat-ck"] = [
   {
     id: "cd1-s48-chung-khoan-khong-bao-gom",
     front: `<p class="q">Theo Luật Chứng khoán 2019, chứng khoán KHÔNG bao gồm loại nào sau đây?</p><p class="q">1. Chứng khoán phái sinh<br>2. Chứng chỉ lưu ký<br>3. Chứng quyền có bảo đảm<br>4. Tín phiếu, hối phiếu</p>`,
-    back: `<p class="tag">Đáp án: 4 — Tín phiếu, hối phiếu</p><ul><li>Khoản 1 Điều 4 Luật Chứng khoán 2019 liệt kê chứng khoán gồm: cổ phiếu, trái phiếu, chứng chỉ quỹ; chứng quyền, chứng quyền có bảo đảm, quyền mua cổ phần, chứng chỉ lưu ký; chứng khoán phái sinh; các loại khác do Chính phủ quy định.</li><li>Hối phiếu là công cụ chuyển nhượng theo pháp luật về các công cụ chuyển nhượng, không phải chứng khoán; tín phiếu kho bạc cũng không thuộc danh mục chứng khoán của Luật Chứng khoán.</li></ul><p class="src">Nguồn: slide 48 · Luật Chứng khoán 2019 (khoản 1 Điều 4)</p>`
+    back: `<p class="tag">Đáp án: 4 — Tín phiếu, hối phiếu</p><ul><li>Khoản 1 Điều 4 Luật Chứng khoán 2019 liệt kê chứng khoán gồm: cổ phiếu, trái phiếu, chứng chỉ quỹ; chứng quyền, chứng quyền có bảo đảm, quyền mua cổ phần, chứng chỉ lưu ký; chứng khoán phái sinh; các loại khác do Chính phủ quy định.</li><li>Hối phiếu là công cụ chuyển nhượng (theo pháp luật về các công cụ chuyển nhượng), không phải chứng khoán; khoản 1 Điều 4 Luật Chứng khoán 2019 không liệt kê tín phiếu trong danh mục chứng khoán.</li></ul><p class="src">Nguồn: slide 48 · Luật Chứng khoán 2019 (khoản 1 Điều 4)</p>`
   },
   {
     id: "cd1-s49-chung-khoan-phai-sinh",
     front: `<p class="q">Theo pháp luật chứng khoán và thị trường chứng khoán, loại chứng khoán nào sau đây là chứng khoán phái sinh?</p><p class="q">A. Hợp đồng tương lai, hợp đồng quyền chọn<br>B. Quyền mua cổ phần<br>C. Chứng quyền<br>D. Tất cả các phương án đều đúng</p>`,
-    back: `<p class="tag">Đáp án: A</p><ul><li>Hợp đồng tương lai và hợp đồng quyền chọn là chứng khoán phái sinh theo khoản 1 Điều 4 Luật Chứng khoán 2019 (chứng khoán phái sinh là một loại chứng khoán).</li><li>Quyền mua cổ phần và chứng quyền là chứng khoán cơ sở (điểm b khoản 1 Điều 4), không phải chứng khoán phái sinh.</li><li>D sai vì B và C không phải chứng khoán phái sinh.</li></ul><p class="src">Nguồn: slide 49 · Luật Chứng khoán 2019 (khoản 1 Điều 4; Nghị định 155/2020/NĐ-CP)</p>`
+    back: `<p class="tag">Đáp án: A</p><ul><li>Khoản 9 Điều 4 Luật Chứng khoán 2019: chứng khoán phái sinh là công cụ tài chính dưới dạng hợp đồng, bao gồm hợp đồng quyền chọn, hợp đồng tương lai, hợp đồng kỳ hạn.</li><li>Quyền mua cổ phần và chứng quyền là các loại chứng khoán khác (điểm b khoản 1 Điều 4), không phải chứng khoán phái sinh.</li><li>D sai vì B và C không phải chứng khoán phái sinh.</li></ul><p class="src">Nguồn: slide 49 · Luật Chứng khoán 2019 (khoản 9 Điều 4)</p>`
   },
   {
     id: "cd1-s50-dinh-chi-giao-dich",
     front: `<p class="q">Ủy ban Chứng khoán Nhà nước thực hiện đình chỉ giao dịch chứng khoán khi nào?</p><p class="q">A. Tổ chức niêm yết, tổ chức đăng ký giao dịch không có biện pháp khắc phục nguyên nhân dẫn đến việc chứng khoán bị đưa vào diện cảnh báo, kiểm soát, hạn chế giao dịch<br>B. Khối lượng giao dịch quá lớn<br>C. Khi có nhà đầu tư nước ngoài mua vượt tỷ lệ sở hữu<br>D. Không có trường hợp nào</p>`,
-    back: `<p class="tag">Đáp án: A</p><ul><li>Đình chỉ giao dịch đối với chứng khoán là biện pháp bảo vệ thị trường, áp dụng khi tổ chức niêm yết, tổ chức đăng ký giao dịch không khắc phục được nguyên nhân khiến chứng khoán bị đưa vào diện cảnh báo, kiểm soát, hạn chế giao dịch (Nghị định 155/2020/NĐ-CP quy định về đưa chứng khoán vào diện cảnh báo, kiểm soát, hạn chế giao dịch và tạm ngừng, đình chỉ giao dịch).</li><li>B, C không phải căn cứ đình chỉ giao dịch; D sai vì A là căn cứ đúng.</li></ul><p class="src">Nguồn: slide 50 · Luật Chứng khoán 2019 (Điều 9, Điều 49) · Nghị định 155/2020/NĐ-CP</p>`
+    back: `<p class="tag">Đáp án: A</p><ul><li>Đình chỉ giao dịch đối với chứng khoán là biện pháp bảo vệ thị trường, áp dụng khi tổ chức niêm yết, tổ chức đăng ký giao dịch không khắc phục được nguyên nhân khiến chứng khoán bị đưa vào diện cảnh báo, kiểm soát, hạn chế giao dịch (Nghị định 155/2020/NĐ-CP quy định về đưa chứng khoán vào diện cảnh báo, kiểm soát, hạn chế giao dịch và tạm ngừng, đình chỉ giao dịch).</li><li>B, C không phải căn cứ đình chỉ giao dịch; D sai vì A là căn cứ đúng.</li></ul><p class="src">Nguồn: slide 50 · Luật Chứng khoán 2019 (Điều 9) · Nghị định 155/2020/NĐ-CP</p>`
   },
   {
     id: "cd1-s51-trinh-tu-thanh-lap-ctck",
@@ -318,8 +318,8 @@ window.SUBJECT_DATA["luat-ck"] = [
 <ul>
   <li>Đặt lệnh mua chứng khoán qua điện thoại với công ty chứng khoán nơi mở tài khoản là giao dịch thông thường, phù hợp quy định (công ty chứng khoán phải ghi âm, lưu trữ theo quy chế).</li>
   <li>A sai: sử dụng thông tin nội bộ để mua bán chứng khoán là hành vi bị nghiêm cấm (khoản 2 Điều 12 Luật Chứng khoán 2019).</li>
-  <li>C sai: nhà đầu tư phải ký hợp đồng với công ty chứng khoán, không ký với nhân viên; nhân viên không được nhận ủy thác của khách hàng.</li>
-  <li>D sai: công ty chứng khoán không được thực hiện chuyển tiền nội bộ giữa tài khoản của các khách hàng (vi phạm quản lý tách biệt tài sản khách hàng).</li>
+  <li>C sai: hợp đồng cung cấp dịch vụ phải ký với công ty chứng khoán, không ký với nhân viên (khoản 4 Điều 89 Luật Chứng khoán 2019); nhân viên không được nhận ủy thác mua bán chứng khoán của khách hàng.</li>
+  <li>D sai: công ty chứng khoán chỉ được sử dụng tài khoản, tài sản của khách hàng khi được khách hàng ủy thác đúng quy định; tự chuyển tiền giữa tài khoản các khách hàng là trái quy định (khoản 5 Điều 12 Luật Chứng khoán 2019).</li>
 </ul>
 <p class="src">Nguồn: slide 60 · Luật Chứng khoán 2019 (Điều 12, Điều 89)</p>`
   },
@@ -388,9 +388,9 @@ window.SUBJECT_DATA["luat-ck"] = [
     back: `<p class="tag">Đáp án: D</p>
 <ul>
   <li>Cổ phiếu ưu đãi biểu quyết là cổ phiếu — chứng khoán cơ sở, không phải chứng khoán phái sinh.</li>
-  <li>Hợp đồng quyền chọn, hợp đồng tương lai, hợp đồng kỳ hạn là các loại chứng khoán phái sinh theo khoản 1 Điều 4 Luật Chứng khoán 2019 và quy định chi tiết của Chính phủ.</li>
+  <li>Khoản 9 Điều 4 Luật Chứng khoán 2019: chứng khoán phái sinh là công cụ tài chính dưới dạng hợp đồng, bao gồm hợp đồng quyền chọn, hợp đồng tương lai, hợp đồng kỳ hạn.</li>
 </ul>
-<p class="src">Nguồn: slide 66 · Luật Chứng khoán 2019 (khoản 1 Điều 4; Nghị định 155/2020/NĐ-CP)</p>`
+<p class="src">Nguồn: slide 66 · Luật Chứng khoán 2019 (khoản 9 Điều 4)</p>`
   },
   {
     id: "cd1-s67-huy-tu-cach-cong-ty-dai-chung",
