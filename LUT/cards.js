@@ -190,5 +190,19 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li><strong>d đúng:</strong> thu thập thông tin về tình hình tài chính, mục tiêu đầu tư, khả năng chấp nhận rủi ro của khách hàng (khoản 6 Điều 89).</li>
 </ul>
 <p class="src">Nguồn: slide 41 · Luật Chứng khoán 2019 (khoản 1 Điều 71; khoản 5 Điều 74; khoản 1 Điều 76; khoản 4 và 6 Điều 89)</p>`
+  },
+  {
+    id: "cd1-s46-co-quan-quan-ly-nha-nuoc",
+    front: `<p class="q">Cơ quan nào sau đây là cơ quan quản lý nhà nước về chứng khoán và thị trường chứng khoán tại Việt Nam?</p>
+<p class="q">a) Chính phủ<br>b) Bộ Tài chính<br>c) Ủy ban Chứng khoán Nhà nước<br>d) Sở giao dịch chứng khoán<br>e) Ủy ban nhân dân các cấp</p>`,
+    back: `<p class="tag">Đáp án: a, b, c, e</p>
+<ul>
+  <li><strong>a — Chính phủ:</strong> thống nhất quản lý nhà nước về chứng khoán và thị trường chứng khoán (khoản 1 Điều 8).</li>
+  <li><strong>b — Bộ Tài chính:</strong> chịu trách nhiệm trước Chính phủ thực hiện quản lý nhà nước về chứng khoán và thị trường chứng khoán (khoản 2 Điều 8).</li>
+  <li><strong>c — Ủy ban Chứng khoán Nhà nước:</strong> cơ quan thuộc Bộ Tài chính, tham mưu giúp Bộ trưởng Bộ Tài chính quản lý nhà nước về chứng khoán và thị trường chứng khoán (khoản 1 Điều 9).</li>
+  <li><strong>e — Ủy ban nhân dân các cấp:</strong> quản lý nhà nước về chứng khoán và thị trường chứng khoán tại địa phương (khoản 4 Điều 8).</li>
+  <li><strong>d sai:</strong> Sở giao dịch chứng khoán là pháp nhân tổ chức, vận hành thị trường giao dịch chứng khoán — đối tượng được quản lý, không phải cơ quan quản lý nhà nước.</li>
+</ul>
+<p class="src">Nguồn: slide 46 · Luật Chứng khoán 2019 (Điều 8, Điều 9)</p>`
   }
 ];
