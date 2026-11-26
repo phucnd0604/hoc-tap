@@ -102,5 +102,20 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li>CTCK/CTQLQ là CTCP hoặc TNHH: LDN quy định loại hình, điều lệ; LCK Điều 74 quy định điều kiện cổ đông/thành viên góp vốn.</li>
 </ul>
 <p class="src">Nguồn: slide 15 · LDN 2020 (Điều 123–125) · LCK 2019 (Điều 9, 31, 74)</p>`
+  },
+  {
+    id: "cd1-s16-van-de-moi-lien-bo",
+    front: `<p class="q">Vấn đề mới phát sinh trên TTCK cần quy định nhưng liên quan đến nhiệm vụ, quyền hạn, phạm vi quản lý nhà nước của từ hai Bộ trở lên — ban hành loại VBQPPL nào?</p>`,
+    back: `<p class="tag">Đáp án: Thông tư liên tịch</p>
+<ul>
+  <li>Ban hành giữa các Bộ trưởng, Thủ trưởng cơ quan ngang Bộ có liên quan (khoản 9 Điều 4 Luật BHVBQPPL 2025).</li>
+  <li>Dùng khi nội dung quy định liên quan đến chức năng, nhiệm vụ, quyền hạn, phạm vi quản lý của từ hai cơ quan trở lên → bảo đảm thống nhất, tránh chồng chéo.</li>
+</ul>
+<p class="tag">Lưu ý</p>
+<ul>
+  <li>Nếu vấn đề vượt thẩm quyền của các Bộ (đặt ra quyền, nghĩa vụ mới hoặc chính sách mới) → trình Chính phủ ban hành Nghị định; cao hơn là Luật/Nghị quyết của Quốc hội.</li>
+  <li>Thông tư liên tịch không thay thế Nghị định khi cần quy định vượt phạm vi thẩm quyền cấp Bộ.</li>
+</ul>
+<p class="src">Nguồn: slide 16 · Luật BHVBQPPL 2025 (khoản 9 Điều 4; Điều 2, 3)</p>`
   }
 ];
