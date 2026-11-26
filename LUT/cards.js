@@ -165,5 +165,17 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li>Điều kiện (khoản 1 Điều 76): đáp ứng khoản 2 Điều 77 và chưa thành lập/góp vốn vào CTCK, CTQLQ tại Việt Nam do công ty nước ngoài sở hữu trên 49% vốn điều lệ; vốn cấp cho chi nhánh theo khoản 1 Điều 74; bảo đảm cơ sở vật chất và nhân sự theo khoản 4–5 Điều 74.</li>
 </ul>
 <p class="src">Nguồn: slide 38 · Luật Chứng khoán 2019 (Điều 76 khoản 3; Điều 74, 77)</p>`
+  },
+  {
+    id: "cd1-s39-nghiep-vu-chi-nhanh-nn",
+    front: `<p class="q">Chi nhánh công ty chứng khoán nước ngoài tại Việt Nam được thực hiện nghiệp vụ nào sau đây?</p>
+<p class="q">a. Tư vấn đầu tư chứng khoán<br>b. Tự doanh chứng khoán<br>c. Bảo lãnh phát hành chứng khoán<br>d. Môi giới chứng khoán</p>`,
+    back: `<p class="tag">Đáp án: a — Tư vấn đầu tư chứng khoán</p>
+<ul>
+  <li><strong>Khoản 7 Điều 86 LCK 2019:</strong> chi nhánh công ty chứng khoán nước ngoài tại Việt Nam <strong>chỉ được thực hiện nghiệp vụ tư vấn đầu tư chứng khoán</strong>.</li>
+  <li>Nghĩa là <strong>không được</strong> tự doanh, bảo lãnh phát hành, môi giới chứng khoán tại Việt Nam.</li>
+  <li>Đối chiếu: chi nhánh công ty quản lý quỹ nước ngoài chỉ được cung cấp dịch vụ quản lý tài sản cho vốn huy động tại nước ngoài (cùng khoản 7 Điều 86).</li>
+</ul>
+<p class="src">Nguồn: slide 39 · Luật Chứng khoán 2019 (khoản 7 Điều 86; Điều 76)</p>`
   }
 ];
