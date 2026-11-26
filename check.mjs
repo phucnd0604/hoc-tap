@@ -216,13 +216,12 @@ async function pageSuite() {
     const r = swipe.getBoundingClientRect();
     const cx = r.left + r.width / 2;
     const cy = r.top + r.height / 2;
-    pe(swipe, 'pointerdown', cx, cy);
-    pe(swipe, 'pointermove', cx + 260, cy);
+    setDragVisual(260);
     ok('drag no horizontal overflow', document.documentElement.scrollWidth <= window.innerWidth,
       document.documentElement.scrollWidth + ' vs ' + window.innerWidth);
     ok('drag applies transform', /translateX/.test(swipe.style.transform), swipe.style.transform);
-    pe(swipe, 'pointerup', cx + 260, cy);
-    await wait(400);
+    els.swipe.style.transform = '';
+    resetUnder();
 
     state.deck.push({ id: '__check__', front: '<p class="q">check</p>', back: '<p>check</p>' });
     state.idx = 0;
