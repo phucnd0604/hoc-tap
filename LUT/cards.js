@@ -155,5 +155,15 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li><strong>C, D sai:</strong> là chào bán riêng lẻ (khoản 20 Điều 4) — công ty đại chúng thực hiện theo Điều 31 LCK, không phải “đăng ký chào bán ra công chúng”.</li>
 </ul>
 <p class="src">Nguồn: slide 34 · Luật Chứng khoán 2019 (Điều 4 khoản 19–20; Điều 16, 31)</p>`
+  },
+  {
+    id: "cd1-s38-chi-nhanh-nuoc-ngoai",
+    front: `<p class="q">Công ty chứng khoán nước ngoài được lập bao nhiêu chi nhánh tại Việt Nam?</p>`,
+    back: `<p class="tag">Đáp án: 01 chi nhánh</p>
+<ul>
+  <li><strong>Khoản 3 Điều 76 LCK 2019:</strong> công ty chứng khoán, công ty quản lý quỹ nước ngoài chỉ được lập <strong>01 chi nhánh</strong> tại Việt Nam.</li>
+  <li>Điều kiện (khoản 1 Điều 76): đáp ứng khoản 2 Điều 77 và chưa thành lập/góp vốn vào CTCK, CTQLQ tại Việt Nam do công ty nước ngoài sở hữu trên 49% vốn điều lệ; vốn cấp cho chi nhánh theo khoản 1 Điều 74; bảo đảm cơ sở vật chất và nhân sự theo khoản 4–5 Điều 74.</li>
+</ul>
+<p class="src">Nguồn: slide 38 · Luật Chứng khoán 2019 (Điều 76 khoản 3; Điều 74, 77)</p>`
   }
 ];
