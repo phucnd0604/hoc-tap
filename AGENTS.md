@@ -3,6 +3,7 @@
 ## Flashcards app
 
 - `flashcards.html` — app duy nhất (UI + ANIMATION KIT). `subjects.js` — registry dropdown. `<môn>/cards.js` — dữ liệu thẻ, `id` phải trùng `subjects.js`.
+- Nội dung thẻ (`front`/`back`): viết đầy đủ thuật ngữ, **không viết tắt** trong câu hỏi/giải thích (trừ số hiệu văn bản như NĐ-CP, TT-BTC); mỗi thẻ kèm căn cứ (slide + điều/khoản).
 - Tiến độ theo môn: `fc:<id>:progress:v1`; môn đang chọn: `fc:last-subject`.
 - Thêm môn: copy `LUT/cards.js`, đổi key, thêm một dòng vào `subjects.js`.
 - Kiểm tra: `node check.mjs` (Chrome headless, exit 1 khi fail).

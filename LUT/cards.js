@@ -1,7 +1,6 @@
 // Dữ liệu thẻ của môn này. flashcards.html tự nạp file này khi chọn môn trong dropdown.
 // Thêm thẻ: copy một object, đổi id (duy nhất trong môn), front, back.
 // front/back nhận HTML đơn giản (<p>, <ul>, <li>, <strong>, <em>).
-// Nội dung thẻ: viết đầy đủ thuật ngữ, không viết tắt (trừ mã văn bản như NĐ-CP, TT-BTC).
 window.SUBJECT_DATA = window.SUBJECT_DATA || {};
 window.SUBJECT_DATA["luat-ck"] = [
   {
