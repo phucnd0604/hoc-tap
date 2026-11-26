@@ -143,5 +143,17 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li><strong>D.</strong> Bán khối lượng lớn khi giá giảm sâu: quyết định đầu tư/bán thật, không đương nhiên là thao túng.</li>
 </ul>
 <p class="src">Nguồn: slide 29–31 · Luật Chứng khoán 2019 (khoản 3 Điều 12 — hành vi bị nghiêm cấm)</p>`
+  },
+  {
+    id: "cd1-s34-dang-ky-chao-ban-cong-khai",
+    front: `<p class="q">Tổ chức phát hành phải nộp hồ sơ đăng ký chào bán chứng khoán ra công chúng với UBCKNN trong trường hợp nào?</p>
+<p class="q">A. Chào bán cổ phiếu cho từ 100 nhà đầu tư trở lên, không kể nhà đầu tư chứng khoán chuyên nghiệp<br>B. Chào bán ra công chúng để chuyển doanh nghiệp nhà nước thành công ty cổ phần<br>C. Công ty đại chúng chào bán riêng lẻ cho dưới 100 nhà đầu tư (không kể chuyên nghiệp)<br>D. Công ty đại chúng chào bán riêng lẻ cho nhà đầu tư chứng khoán chuyên nghiệp</p>`,
+    back: `<p class="tag">Đáp án: A</p>
+<ul>
+  <li>A là <strong>chào bán ra công chúng</strong> (chào bán cho từ 100 nhà đầu tư trở lên, không kể chuyên nghiệp — khoản 19 Điều 4 LCK) → phải nộp hồ sơ đăng ký với UBCKNN (Điều 16 LCK).</li>
+  <li><strong>B sai:</strong> chào bán cổ phiếu ra công chúng để chuyển DNNN, công ty TNHH MTV 100% vốn DNNN, đơn vị sự nghiệp công lập thành công ty cổ phần <strong>không phải đăng ký</strong> (điểm c khoản 2 Điều 16 LCK).</li>
+  <li><strong>C, D sai:</strong> là chào bán riêng lẻ (khoản 20 Điều 4) — công ty đại chúng thực hiện theo Điều 31 LCK, không phải “đăng ký chào bán ra công chúng”.</li>
+</ul>
+<p class="src">Nguồn: slide 34 · Luật Chứng khoán 2019 (Điều 4 khoản 19–20; Điều 16, 31)</p>`
   }
 ];
