@@ -129,5 +129,19 @@ window.SUBJECT_DATA["luat-ck"] = [
 <p class="tag">Vì sao a sai</p>
 <p>Đình chỉ (Điều 27) và hủy bỏ (Điều 28) đợt chào bán ra công chúng là biện pháp xử lý đối với đợt chào bán — không nằm trong Điều 7.</p>
 <p class="src">Nguồn: slide 26–28 · LCK 2019 (Điều 7, 27, 28)</p>`
+  },
+  {
+    id: "cd1-s31-thao-tung-ttck",
+    front: `<p class="q">Trường hợp nào dưới đây được coi là hành vi thao túng thị trường chứng khoán?</p>
+<p class="q">A. Giao dịch với khối lượng lớn trong một phiên<br>B. Đặt lệnh mua bán không nhằm mục đích giao dịch thực sự<br>C. Chậm công bố thông tin<br>D. Bán khối lượng lớn chứng khoán khi giá giảm sâu</p>`,
+    back: `<p class="tag">Đáp án: B — Đặt lệnh mua, bán không nhằm mục đích giao dịch thực sự</p>
+<p>Đây là dấu hiệu kinh điển của thao túng: đặt lệnh “ảo” để tạo cung – cầu giả tạo, gây hiểu nhầm về khối lượng/giá rồi hủy lệnh hoặc khớp với lệnh của chính mình.</p>
+<p class="tag">Vì sao các đáp án khác không phải thao túng</p>
+<ul>
+  <li><strong>A.</strong> Giao dịch khối lượng lớn trong một phiên: có thể là giao dịch thật, pháp luật không cấm; chỉ bị coi là thao túng nếu kèm mục đích tạo cung cầu giả tạo.</li>
+  <li><strong>C.</strong> Chậm công bố thông tin: vi phạm nghĩa vụ công bố thông tin, xử lý theo chế tài công bố thông tin — không phải thao túng.</li>
+  <li><strong>D.</strong> Bán khối lượng lớn khi giá giảm sâu: quyết định đầu tư/bán thật, không đương nhiên là thao túng.</li>
+</ul>
+<p class="src">Nguồn: slide 29–31 · Luật Chứng khoán 2019 (khoản 3 Điều 12 — hành vi bị nghiêm cấm)</p>`
   }
 ];
