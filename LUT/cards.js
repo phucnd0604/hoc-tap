@@ -177,5 +177,18 @@ window.SUBJECT_DATA["luat-ck"] = [
   <li>Đối chiếu: chi nhánh công ty quản lý quỹ nước ngoài chỉ được cung cấp dịch vụ quản lý tài sản cho vốn huy động tại nước ngoài (cùng khoản 7 Điều 86).</li>
 </ul>
 <p class="src">Nguồn: slide 39 · Luật Chứng khoán 2019 (khoản 7 Điều 86; Điều 76)</p>`
+  },
+  {
+    id: "cd1-s41-nghia-vu-chi-nhanh-nn",
+    front: `<p class="q">Nghĩa vụ nào KHÔNG phải nghĩa vụ của chi nhánh công ty chứng khoán nước ngoài tại Việt Nam?</p>
+<p class="q">a. Bảo đảm có tối thiểu 05 nhân viên có CCHN tại mỗi bộ phận trong các nghiệp vụ tại chi nhánh<br>b. Đăng ký thành lập và hoạt động tại Cơ quan đăng ký kinh doanh<br>c. Ký hợp đồng bằng văn bản với khách hàng khi cung cấp dịch vụ môi giới cho khách hàng<br>d. Thu thập thông tin về tình hình tài chính, khả năng chấp nhận rủi ro của khách hàng trước khi mở tài khoản giao dịch chứng khoán</p>`,
+    back: `<p class="tag">Đáp án: a</p>
+<ul>
+  <li><strong>a sai:</strong> LCK 2019 (khoản 5 Điều 74, áp dụng cho chi nhánh qua điểm c khoản 1 Điều 76) chỉ yêu cầu <strong>tối thiểu 03 nhân viên có CCHN cho mỗi nghiệp vụ</strong> + 01 nhân viên kiểm soát tuân thủ — không phải 05 nhân viên tại mỗi bộ phận.</li>
+  <li><strong>b đúng:</strong> chi nhánh phải đăng ký kinh doanh tại Cơ quan đăng ký kinh doanh (khoản 1 Điều 71).</li>
+  <li><strong>c đúng:</strong> ký hợp đồng bằng văn bản với khách hàng khi cung cấp dịch vụ (khoản 4 Điều 89).</li>
+  <li><strong>d đúng:</strong> thu thập thông tin về tình hình tài chính, mục tiêu đầu tư, khả năng chấp nhận rủi ro của khách hàng (khoản 6 Điều 89).</li>
+</ul>
+<p class="src">Nguồn: slide 41 · Luật Chứng khoán 2019 (khoản 1 Điều 71; khoản 5 Điều 74; khoản 1 Điều 76; khoản 4 và 6 Điều 89)</p>`
   }
 ];
