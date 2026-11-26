@@ -1,6 +1,6 @@
 # Học-tap — Flashcards Luật Chứng khoán & TTCK
 
-Bộ thẻ ghi nhớ dạng vuốt (kiểu Tinder) để ôn môn Luật Chứng khoán và thị trường chứng khoán.
+Bộ thẻ ghi nhớ (vuốt/lật) để ôn môn Luật Chứng khoán và thị trường chứng khoán.
 
 **Live:** https://hoc-tap-five.vercel.app/
 

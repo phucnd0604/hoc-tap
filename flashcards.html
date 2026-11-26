@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#FFF7F8">
+<meta name="theme-color" content="#F4EFE3">
 <title>Flashcard · Học theo môn</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   /* =====================================================================
      BỘ ANIMATION DÙNG CHUNG (ANIMATION KIT)
@@ -19,28 +19,27 @@
        - Nháy nút    : Anim.pulse()
      ===================================================================== */
   :root{
-    --bg:#FFF7F8; --card:#fff; --ink:#2A0F1A; --muted:#8A5B67; --muted-2:#9A6B78;
-    --rose:#E11D48; --rose-soft:#FB7185; --warm:#EA580C;
-    --grad:linear-gradient(135deg,#FD267A 0%,#FF6036 100%);
-    --line:#F7D8DF; --line-strong:#FBCFE8;
-    --radius:26px;
-    --shadow-card:0 26px 50px -14px rgba(225,29,72,.28), 0 10px 24px rgba(225,29,72,.10);
+    --bg:#F4EFE3; --card:#FFFDF7; --ink:#2A2620; --muted:#6B6154; --muted-2:#7A6F60;
+    --accent:#1F5D50; --accent-soft:#E7EFEA; --accent-ink:#17463C;
+    --line:#DCD3C2; --line-strong:#CFC4B0;
+    --radius:14px;
+    --shadow-card:0 10px 30px rgba(42,38,32,.09), 0 2px 6px rgba(42,38,32,.04);
     --ease-flip:cubic-bezier(.2,.75,.25,1);
+    --serif:'Lora',Georgia,'Times New Roman',serif;
   }
   *{box-sizing:border-box}
   [hidden]{display:none !important}
   html,body{height:100%; overflow-x:hidden}
   body{
     margin:0; overflow-x:hidden; overscroll-behavior-x:none;
-    font-family:'Nunito','Segoe UI',system-ui,-apple-system,Roboto,sans-serif;
+    font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;
     color:var(--ink); min-height:100vh; display:flex; flex-direction:column;
     background:
-      radial-gradient(1100px 620px at 12% -14%, #FFE1E9 0%, rgba(255,225,233,0) 58%),
-      radial-gradient(900px 620px at 106% 6%, #FFE9DC 0%, rgba(255,233,220,0) 55%),
+      radial-gradient(900px 520px at 12% -12%, #FBF7EC 0%, rgba(251,247,236,0) 60%),
       var(--bg);
   }
   button{font:inherit}
-  :focus-visible{outline:3px solid #FD267A; outline-offset:2px; border-radius:10px}
+  :focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:10px}
 
   /* ---------- Header ---------- */
   header{
@@ -49,56 +48,56 @@
   }
   .brand{display:flex; align-items:center; gap:9px; min-width:0}
   .logo{
-    width:30px; height:30px; border-radius:50%; background:var(--grad);
-    display:grid; place-items:center; box-shadow:0 6px 14px rgba(253,38,122,.35); flex:0 0 auto;
+    width:30px; height:30px; border-radius:8px; background:var(--accent);
+    display:grid; place-items:center; box-shadow:0 4px 10px rgba(31,93,80,.20); flex:0 0 auto;
   }
-  .logo svg{width:16px; height:16px; color:#fff}
+  .logo svg{width:17px; height:17px; color:#FFFDF7}
   .wordmark{
-    font-size:11px; font-weight:900; letter-spacing:.16em; text-transform:uppercase;
-    color:#B04A63;
+    font-family:var(--serif); font-size:12px; font-weight:600; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--muted);
   }
   .subject-wrap{position:relative; min-width:0}
   .subject-btn{
     display:inline-flex; align-items:center; gap:8px; max-width:min(56vw,460px);
-    padding:9px 14px; border-radius:999px; border:1.5px solid var(--line-strong); background:#fff;
-    font-weight:800; font-size:15px; color:#3B0A1E; cursor:pointer;
-    box-shadow:0 4px 12px rgba(225,29,72,.06);
+    padding:9px 14px; border-radius:999px; border:1px solid var(--line); background:var(--card);
+    font-weight:700; font-size:15px; color:var(--ink); cursor:pointer;
+    box-shadow:0 2px 6px rgba(42,38,32,.05);
     transition:background .15s ease, border-color .15s ease, box-shadow .15s ease;
   }
-  .subject-btn:hover{background:#FFF5F8; border-color:#F9A8D4}
-  .subject-btn[aria-expanded="true"]{border-color:#FD267A; box-shadow:0 0 0 4px rgba(253,38,122,.12)}
+  .subject-btn:hover{background:var(--accent-soft); border-color:var(--accent)}
+  .subject-btn[aria-expanded="true"]{border-color:var(--accent); box-shadow:0 0 0 3px rgba(31,93,80,.14)}
   .subject-btn[aria-busy="true"]{opacity:.65; cursor:progress}
   .subject-name{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-  .chev{flex:0 0 auto; color:#BE123C; transition:transform .18s ease}
+  .chev{flex:0 0 auto; color:var(--accent); transition:transform .18s ease}
   .subject-btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
   .subject-list{
     position:absolute; left:0; top:calc(100% + 8px);
     min-width:max(100%,240px); max-width:min(88vw,420px); margin:0; padding:6px; list-style:none;
-    background:#fff; border:1px solid #F8D7DF; border-radius:16px;
-    box-shadow:0 22px 48px rgba(190,18,60,.20);
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    box-shadow:0 18px 40px rgba(42,38,32,.16);
     opacity:0; transform:translateY(-6px) scale(.98); pointer-events:none;
     transition:opacity .16s ease, transform .16s ease; z-index:40;
   }
   .subject-wrap.open .subject-list{opacity:1; transform:none; pointer-events:auto}
   .subject-option{
-    padding:10px 12px; border-radius:11px; font-size:14px; font-weight:700;
-    color:#3B0A1E; cursor:pointer; outline:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+    padding:10px 12px; border-radius:10px; font-size:14px; font-weight:600;
+    color:var(--ink); cursor:pointer; outline:none; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
   }
-  .subject-option:hover{background:#FFF1F5}
-  .subject-option:focus{background:#FFF1F5}
-  .subject-option[aria-selected="true"]{background:#FFE4EC; color:#BE123C}
+  .subject-option:hover{background:var(--accent-soft)}
+  .subject-option:focus{background:var(--accent-soft)}
+  .subject-option[aria-selected="true"]{background:var(--accent-soft); color:var(--accent-ink)}
   .meta{display:flex; gap:6px; margin-left:auto}
   .pill{
-    padding:6px 11px; border-radius:999px; background:#fff; border:1px solid var(--line-strong);
-    font-size:12px; font-weight:800; color:#9F1239; white-space:nowrap;
+    padding:6px 11px; border-radius:999px; background:var(--card); border:1px solid var(--line);
+    font-size:12px; font-weight:600; color:var(--muted); white-space:nowrap;
   }
 
   /* ---------- Sân khấu thẻ ---------- */
   main{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:16px 18px 4px; width:100%}
   .stage{position:relative; width:min(640px,100%); height:clamp(380px,54vh,580px); perspective:1500px}
   .under{
-    position:absolute; inset:0; border-radius:var(--radius); background:#fff;
-    border:1px solid #FBE3E9; box-shadow:0 12px 28px rgba(225,29,72,.07);
+    position:absolute; inset:0; border-radius:var(--radius); background:var(--card);
+    border:1px solid var(--line); box-shadow:0 8px 20px rgba(42,38,32,.05);
     transform:translateY(16px) scale(.955); pointer-events:none;
   }
   .swipe{
@@ -116,49 +115,47 @@
   .card.flipped{transform:rotateY(180deg)}
   .face{
     position:absolute; inset:0; padding:clamp(24px,3.8vw,40px);
-    background:var(--card); border-radius:var(--radius);
+    background:var(--card); border-radius:var(--radius); border:1px solid var(--line);
     backface-visibility:hidden; -webkit-backface-visibility:hidden;
     touch-action:pan-y; user-select:none;
   }
   .face.front{display:flex; flex-direction:column; justify-content:center; overflow:hidden}
-  .face.back{transform:rotateY(180deg); overflow:auto; scrollbar-width:thin; scrollbar-color:#F3D6DD transparent}
+  .face.back{transform:rotateY(180deg); overflow:auto; scrollbar-width:thin; scrollbar-color:var(--line) transparent}
   .face.back::-webkit-scrollbar{width:8px}
-  .face.back::-webkit-scrollbar-thumb{background:#F3D6DD; border-radius:8px}
+  .face.back::-webkit-scrollbar-thumb{background:var(--line); border-radius:8px}
 
-  .q{font-size:clamp(19px,2.4vw,24px); font-weight:800; line-height:1.38; letter-spacing:-.01em; margin:.3em 0}
-  .back{font-size:clamp(15px,1.7vw,16.5px); line-height:1.65; color:#4A2A35}
+  .q{font-family:var(--serif); font-size:clamp(20px,2.4vw,25px); font-weight:600; line-height:1.42; letter-spacing:0; margin:.3em 0; color:var(--ink)}
+  .back{font-size:clamp(15px,1.7vw,16.5px); line-height:1.7; color:var(--ink)}
   .back ul{margin:.4em 0 .8em; padding-left:1.15em}
   .back li{margin:.38em 0}
-  .tag{font-weight:800; color:var(--rose); margin:1.1em 0 .2em; font-size:.98em}
+  .tag{font-weight:700; color:var(--accent); margin:1.1em 0 .2em; font-size:.98em}
   .tag:first-child{margin-top:0}
-  .src{margin-top:1.3em; padding-top:.85em; border-top:1px dashed #F3D6DD; color:var(--muted-2); font-size:.82em; line-height:1.55}
+  .src{margin-top:1.3em; padding-top:.85em; border-top:1px dashed var(--line); color:var(--muted-2); font-size:.82em; line-height:1.55}
 
   .hint{color:var(--muted); font-size:12.5px; text-align:center; max-width:640px}
 
-  /* ---------- Hàng nút kiểu Tinder ---------- */
+  /* ---------- Hàng nút ---------- */
   .actions{display:flex; align-items:flex-start; justify-content:center; gap:clamp(14px,3vw,26px); padding:6px 16px 16px}
   .act-wrap{display:flex; flex-direction:column; align-items:center; gap:6px}
   .act{
     width:56px; height:56px; border-radius:50%; display:grid; place-items:center;
-    background:#fff; border:1.5px solid var(--line); color:var(--rose);
-    box-shadow:0 8px 18px rgba(190,18,60,.10); cursor:pointer;
+    background:var(--card); border:1px solid var(--line); color:#5B5446;
+    box-shadow:0 3px 10px rgba(42,38,32,.07); cursor:pointer;
     transition:transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
   }
   .act svg{width:24px; height:24px}
-  .act:hover{transform:translateY(-2px); box-shadow:0 12px 24px rgba(190,18,60,.18)}
+  .act:hover{transform:translateY(-2px); border-color:var(--accent); background:var(--accent-soft); box-shadow:0 6px 16px rgba(42,38,32,.10)}
   .act:active{transform:scale(.96)}
   .act:disabled{opacity:.38; cursor:not-allowed; transform:none; box-shadow:none}
-  .act-prev{color:#D97706}
-  .act-next{color:#E11D48}
   .act-flip{
-    width:66px; height:66px; border:0; color:#fff; background:var(--grad);
-    box-shadow:0 14px 26px rgba(253,38,122,.36);
+    width:66px; height:66px; border:0; color:#FFFDF7; background:var(--accent);
+    box-shadow:0 10px 22px rgba(31,93,80,.28);
   }
-  .act-flip:hover{box-shadow:0 18px 32px rgba(253,38,122,.44)}
-  .act-mark{color:#16A34A}
-  .act-mark.on{background:#ECFDF3; border-color:#86EFAC; color:#15803D}
+  .act-flip:hover{background:var(--accent-ink); box-shadow:0 14px 26px rgba(31,93,80,.34)}
+  .act-mark{color:var(--accent)}
+  .act-mark.on{background:var(--accent-soft); border-color:var(--accent); color:var(--accent-ink)}
   .act-mark.on svg{fill:currentColor}
-  .act-label{font-size:10.5px; font-weight:800; color:var(--muted-2); letter-spacing:.02em}
+  .act-label{font-size:10.5px; font-weight:600; color:var(--muted-2); letter-spacing:.02em}
 
   @media (max-width:640px){
     .wordmark{display:none}
@@ -172,6 +169,19 @@
   @media (prefers-reduced-motion: reduce){
     .card, .subject-list, .chev, .act, .subject-btn{transition:none}
   }
+  @media print{
+    header, nav, .hint, .under{display:none !important}
+    body{background:#fff; display:block; min-height:0}
+    main{display:block; padding:0 16px}
+    .stage{height:auto; perspective:none; width:100%}
+    .swipe{position:static; box-shadow:none}
+    .card{position:static; transform:none !important; transition:none}
+    .face{position:static; display:block !important; transform:none !important; background:transparent; border:0; border-radius:0; overflow:visible; padding:0 0 14px}
+    .face.front{border-bottom:1px solid var(--line); margin-bottom:14px}
+    .face[hidden]{display:block !important}
+    .q{font-size:16pt}
+    .back{font-size:11pt}
+  }
 </style>
 </head>
 <body>
@@ -179,7 +189,7 @@
   <div class="brand">
     <span class="logo" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+        <path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>
       </svg>
     </span>
     <span class="wordmark">Flashcard</span>
@@ -233,7 +243,7 @@
   </div>
   <div class="act-wrap">
     <button id="mark" class="act act-mark" type="button" aria-label="Đánh dấu đã thuộc" title="Đánh dấu đã thuộc">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>
     </button>
     <span class="act-label">Thuộc</span>
   </div>

@@ -6,7 +6,7 @@
 
 1. Chạy skill `ui-ux-pro-max` với `--design-system` (hoặc gõ `/ui-ux-pro-max`) để lấy design system; không gọi script bằng đường dẫn máy.
 2. Chốt token vào `:root` của `flashcards.html` (màu, font, bo góc, shadow, easing). Không dùng màu rời rạc ngoài token.
-3. Giữ phong cách hiện tại: nền hồng/cam nhạt, card trắng bo 26, action nút tròn, gradient `#FD267A → #FF6036`.
+3. Giữ phong cách hiện tại: “giấy học thuật” — nền kem `#F4EFE3`, card `#FFFDF7` viền mảnh bo 14, câu hỏi serif (Lora), accent xanh rêu `#1F5D50`; không gradient.
 
 ## Checklist QA (bắt buộc trước khi bàn giao)
 
@@ -16,6 +16,7 @@
 - [ ] Lật 3D: mặt sau không lộ mirror; nội dung dài scroll bên trong mặt sau.
 - [ ] Vuốt được **sau khi lật** (chuột và touch, kể cả khi bắt đầu kéo trên nội dung mặt sau); mặt sau vẫn cuộn dọc được.
 - [ ] Focus ring rõ; `prefers-reduced-motion` tắt animation.
+- [ ] Bản in: Ctrl+P ra mặt trước + mặt sau liền mạch; không header/nút/hint.
 - [ ] Chạy `node check.mjs` — pass hết.
 
 ## Không làm

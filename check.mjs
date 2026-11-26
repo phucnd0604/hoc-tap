@@ -366,10 +366,22 @@ try {
   await shot('01-front.png');
   await evalExpr('(function(){ document.getElementById("flip").click(); return true; })()');
   await sleep(700);
+  await evalExpr('(function(){ document.getElementById("back").scrollTop = 0; return true; })()');
   await shot('02-back.png');
   await evalExpr('(function(){ document.getElementById("flip").click(); document.getElementById("subjectBtn").click(); return true; })()');
   await sleep(400);
   await shot('03-subjects.png');
+  await evalExpr('(function(){ document.getElementById("subjectBtn").click(); return true; })()');
+  await cdp.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 2, mobile: true });
+  await sleep(350);
+  await shot('04-mobile.png');
+  await cdp.send('Emulation.clearDeviceMetricsOverride');
+  await cdp.send('Emulation.setDeviceMetricsOverride', { width: 764, height: 1600, deviceScaleFactor: 1, mobile: false });
+  await cdp.send('Emulation.setEmulatedMedia', { media: 'print' });
+  await sleep(350);
+  await shot('05-print.png');
+  await cdp.send('Emulation.setEmulatedMedia', { media: '' });
+  await cdp.send('Emulation.clearDeviceMetricsOverride');
 } catch (err) {
   failed++;
   console.error('  [FAIL] harness: ' + (err && err.message ? err.message : err));
