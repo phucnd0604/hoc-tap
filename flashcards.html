@@ -29,11 +29,11 @@
   }
   *{box-sizing:border-box}
   [hidden]{display:none !important}
-  html,body{height:100%; overflow-x:hidden}
+  html,body{height:100%; overflow:hidden}
   body{
     margin:0; overflow-x:hidden; overscroll-behavior-x:none;
     font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;
-    color:var(--ink); min-height:100vh; display:flex; flex-direction:column;
+    color:var(--ink); height:100vh; height:100dvh; display:flex; flex-direction:column;
     background:
       radial-gradient(900px 520px at 12% -12%, #FBF7EC 0%, rgba(251,247,236,0) 60%),
       var(--bg);
@@ -44,7 +44,7 @@
   /* ---------- Header ---------- */
   header{
     display:flex; align-items:center; gap:10px; flex-wrap:wrap;
-    padding:12px 18px 10px;
+    padding:12px 18px 10px; flex:0 0 auto;
   }
   .brand{display:flex; align-items:center; gap:9px; min-width:0}
   .logo{
@@ -93,8 +93,8 @@
   }
 
   /* ---------- Sân khấu thẻ ---------- */
-  main{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; padding:16px 18px 4px; width:100%}
-  .stage{position:relative; width:min(640px,100%); height:clamp(380px,54vh,580px); perspective:1500px}
+  main{flex:1 1 auto; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; padding:12px 18px 4px; width:100%; overflow:hidden}
+  .stage{position:relative; width:min(640px,100%); flex:1 1 auto; min-height:0; max-height:680px; perspective:1500px}
   .under{
     position:absolute; inset:0; border-radius:var(--radius); background:var(--card);
     border:1px solid var(--line); box-shadow:0 8px 20px rgba(42,38,32,.05);
@@ -119,7 +119,7 @@
     backface-visibility:hidden; -webkit-backface-visibility:hidden;
     touch-action:pan-y; user-select:none;
   }
-  .face.front{display:flex; flex-direction:column; justify-content:center; overflow:hidden}
+  .face.front{display:flex; flex-direction:column; justify-content:center; overflow:auto; scrollbar-width:thin}
   .face.back{transform:rotateY(180deg); overflow:auto; scrollbar-width:thin; scrollbar-color:var(--line) transparent}
   .face.back::-webkit-scrollbar{width:8px}
   .face.back::-webkit-scrollbar-thumb{background:var(--line); border-radius:8px}
@@ -135,7 +135,7 @@
   .hint{color:var(--muted); font-size:12.5px; text-align:center; max-width:640px}
 
   /* ---------- Hàng nút ---------- */
-  .actions{display:flex; align-items:flex-start; justify-content:center; gap:clamp(14px,3vw,26px); padding:6px 16px 16px}
+  .actions{display:flex; align-items:flex-start; justify-content:center; gap:clamp(14px,3vw,26px); padding:6px 16px 12px; flex:0 0 auto}
   .act-wrap{display:flex; flex-direction:column; align-items:center; gap:6px}
   .act{
     width:56px; height:56px; border-radius:50%; display:grid; place-items:center;
@@ -161,7 +161,6 @@
     .wordmark{display:none}
     .subject-btn{max-width:64vw}
     .meta .pill{font-size:11px; padding:5px 8px}
-    .stage{height:clamp(420px,62vh,600px)}
   }
   @media (max-width:420px){
     .subject-btn{max-width:60vw; font-size:14px}
@@ -169,10 +168,21 @@
   @media (prefers-reduced-motion: reduce){
     .card, .subject-list, .chev, .act, .subject-btn{transition:none}
   }
+  @media (max-height:560px){
+    .act{width:48px; height:48px}
+    .act-flip{width:56px; height:56px}
+    .act svg{width:20px; height:20px}
+    .act-label{font-size:9.5px}
+    .hint{font-size:11px}
+    .face{padding:16px}
+    .q{font-size:clamp(17px,2.2vw,21px)}
+  }
   @media print{
     header, nav, .hint, .under{display:none !important}
-    body{background:#fff; display:block; min-height:0}
-    main{display:block; padding:0 16px}
+    html,body{height:auto; overflow:visible}
+    body{background:#fff; display:block; min-height:0; height:auto}
+    main{display:block; padding:0 16px; overflow:visible}
+    .face.front{overflow:visible}
     .stage{height:auto; perspective:none; width:100%}
     .swipe{position:static; box-shadow:none}
     .card{position:static; transform:none !important; transition:none}

@@ -11,6 +11,7 @@
 ## Checklist QA (bắt buộc trước khi bàn giao)
 
 - [ ] 390px và ≥1280px: header không tràn, nhãn nút không bị cắt.
+- [ ] Không scroll dọc trang (764×485 và 390×844): thẻ co giãn theo chiều cao, đủ header/hint/nút; nội dung dài cuộn trong mặt thẻ.
 - [ ] Dropdown: chuột mở/đóng; ArrowDown mở; Esc đóng + trả focus; click ngoài đóng; Enter chọn.
 - [ ] Kéo 260px: không scrollbar ngang (`scrollWidth <= innerWidth`).
 - [ ] Lật 3D: mặt sau không lộ mirror; nội dung dài scroll bên trong mặt sau.

@@ -192,6 +192,9 @@ async function pageSuite() {
     ok('subject loaded', typeof state !== 'undefined' && !!state.id && state.deck.length > 0, typeof state === 'undefined' ? 'không có state' : state.id);
     if (typeof state === 'undefined' || !state.deck.length) return { results };
 
+    const fit = { sh: document.documentElement.scrollHeight, ih: window.innerHeight, sw: document.documentElement.scrollWidth, iw: window.innerWidth };
+    ok('no page vertical scroll', fit.sh <= fit.ih + 1 && fit.sw <= fit.iw, fit.sh + 'x' + fit.sw + ' in ' + fit.ih + 'x' + fit.iw);
+
     const meta = (typeof SUBJECTS !== 'undefined' ? SUBJECTS : []).filter((s) => s.id === state.id)[0];
     ok('subject name shown', !!meta && document.getElementById('subjectName').textContent === meta.name);
 
@@ -374,6 +377,10 @@ try {
   await evalExpr('(function(){ document.getElementById("subjectBtn").click(); return true; })()');
   await cdp.send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 2, mobile: true });
   await sleep(350);
+  const mfit = await evalExpr('(function(){ return { sh: document.documentElement.scrollHeight, ih: window.innerHeight, sw: document.documentElement.scrollWidth, iw: window.innerWidth }; })()');
+  const mpass = mfit.sh <= mfit.ih + 1 && mfit.sw <= mfit.iw;
+  log((mpass ? '  [PASS] ' : '  [FAIL] ') + 'no page scroll at 390x844 - ' + mfit.sh + 'x' + mfit.sw + ' in ' + mfit.ih + 'x' + mfit.iw);
+  if (!mpass) failed++;
   await shot('04-mobile.png');
   await cdp.send('Emulation.clearDeviceMetricsOverride');
   await cdp.send('Emulation.setDeviceMetricsOverride', { width: 764, height: 1600, deviceScaleFactor: 1, mobile: false });
